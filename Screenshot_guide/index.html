@@ -1,0 +1,643 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
+    
+    
+      
+        <title>Anamorphic Files - Popcorn Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e411adfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="brown">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-are-anamorphic-files" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Popcorn Guide" class="md-header__button md-logo" aria-label="Popcorn Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Popcorn Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Anamorphic Files
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Video
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Popcorn Guide" class="md-nav__button md-logo" aria-label="Popcorn Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Popcorn Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Video
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Video" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Video
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Screenshots
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Screenshots" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Screenshots
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Anamorphic Files
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Anamorphic Files
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-anamorphic-files" class="md-nav__link">
+    What are anamorphic files?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-tell-if-a-file-is-anamorphic" class="md-nav__link">
+    How to tell if a file is anamorphic:
+  </a>
+  
+    <nav class="md-nav" aria-label="How to tell if a file is anamorphic:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-using-par" class="md-nav__link">
+    1.1 Using PAR:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-using-par-alternate-method" class="md-nav__link">
+    1.2 Using PAR (alternate method):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-using-dar" class="md-nav__link">
+    1.3 Using DAR:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading-material" class="md-nav__link">
+    Further reading material:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-anamorphic-files" class="md-nav__link">
+    What are anamorphic files?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-tell-if-a-file-is-anamorphic" class="md-nav__link">
+    How to tell if a file is anamorphic:
+  </a>
+  
+    <nav class="md-nav" aria-label="How to tell if a file is anamorphic:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-using-par" class="md-nav__link">
+    1.1 Using PAR:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-using-par-alternate-method" class="md-nav__link">
+    1.2 Using PAR (alternate method):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-using-dar" class="md-nav__link">
+    1.3 Using DAR:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading-material" class="md-nav__link">
+    Further reading material:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  
+
+
+
+<div align="center">
+<h1> <b> <p style="color:indigo">
+Anamorphic Files: Storage Resolution vs Display Resolution
+</p> </b> </h1>
+</div>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section is only relevant for files with anamorphic resolution. It is primarily found in rips from DVD, VHS and TV.
+Some lower quality Blu-ray content, especially Extras, are also anamorphically encoded.</p>
+</div>
+<h3 id="what-are-anamorphic-files"><strong>What are anamorphic files?</strong><a class="headerlink" href="#what-are-anamorphic-files" title="Permanent link">#</a></h3>
+<p>Anamorphic files are encoded (or stored) at a different resolution than what they are displayed in. The resolution at which such a file is stored is called the <strong>Storage Resolution</strong>, and the resolution at which it is displayed is called the <strong>Display Resolution</strong>. For example, a file may be encoded at 720x480 resolution, but at the time of playback, it's scaled to 853x480 by your media player or device.</p>
+<p>For our purposes, the screenshots need to be taken at the Display Resolution. Screenshots taken at Storage Resolution will appear to be Bad Aspect Ratio. They will look shrunk or stretched, and will not represent what the video actually looks like to someone watching the film.</p>
+<details class="note">
+<summary>Example of screenshot taken at storage vs display resolution:</summary>
+<p><img alt="storage" src="../images/sr_vs_dr_1.jpg" title="Storage Resolution screenshot" />
+<img alt="display" src="../images/sr_vs_dr_2.jpg" title="Display Resolution screenshot" /></p>
+</details>
+<hr />
+<h3 id="how-to-tell-if-a-file-is-anamorphic"><strong>How to tell if a file is anamorphic:</strong><a class="headerlink" href="#how-to-tell-if-a-file-is-anamorphic" title="Permanent link">#</a></h3>
+<ul>
+<li>
+<p>The easiest way is to look at the mediainfo summary on site. Whenever the <strong>Resolution</strong> field shows two values, one after the other, the file is anamorphic. The resolutions are in the form <code>Storage RES ~&gt; Display RES</code>. </p>
+<ul>
+<li><img alt="display" src="../images/tell_anamorphic.png" title="How to tell if file is anamorphic" /></li>
+<li>The screenshots must be taken in the second resolution, i.e. Display Resolution. However, for many files, the screenshots will not match the Display Resolution exactly. There can be a discrepancy of 10 or 20 pixels between the screenshots and the Display Resolution shown in the summary. This is normal, and it happens because the <code>Display aspect ratio</code> in mediainfo is an approximation instead of being an exact value. For example, mediainfo may round an AR of 1.834:1 to 1.85:1.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>The second way is through the <strong>Advanced mode</strong> in mediainfo. There are two ways to take Advanced mediainfo of a file.</li>
+<li><strong>CLI:</strong> <code>mediainfo -f file.mkv &gt; output.txt</code></li>
+<li><strong>GUI:</strong> Load the file in the mediainfo application. First, go to <code>View</code> in menu bar and ensure that the <code>Text</code> view is selected. Then click on <code>Debug</code> and then <code>Advanced mode</code>. See <a href="../images/mi_advanced.png">this screenshot</a> if you need help finding it.</li>
+<li>For illustration purposes, a sample file of resolution 718x436 was chosen. The relevant part we want from the Advanced mediainfo is:
+    <div class="highlight"><pre><span></span><code>    Pixel aspect ratio                       : 1.422
+    Display aspect ratio                     : 2.342
+    Display aspect ratio                     : 2.35:1
+</code></pre></div><ul>
+<li>
+<h4 id="11-using-par">1.1 Using <abbr title="Pixel Aspect Ratio">PAR</abbr>:<a class="headerlink" href="#11-using-par" title="Permanent link">#</a></h4>
+Files that are <strong>NOT</strong> anamorphic will have a <code>Pixel aspect ratio</code> (<abbr title="Pixel Aspect Ratio">PAR</abbr>) of exactly 1.000. You can use the <abbr title="Pixel Aspect Ratio">PAR</abbr> to find out what the Display Resolution should be. Just multiply the width of the file with the <abbr title="Pixel Aspect Ratio">PAR</abbr> value. So since the file's storage resolution is 718x436, the display width will be <span class="arithmatex">\(718 \times 1.422\)</span> which equals <span class="arithmatex">\(1021\)</span>. Therefore, your screenshots will come out approximately 1021x436.</li>
+<li>
+<h4 id="12-using-par-alternate-method">1.2 Using <abbr title="Pixel Aspect Ratio">PAR</abbr> (alternate method):<a class="headerlink" href="#12-using-par-alternate-method" title="Permanent link">#</a></h4>
+Some media players might display this file at an <em>alternate</em> display resolution, where <em>instead of the width being multiplied, the height gets divided</em> by the <abbr title="Pixel Aspect Ratio">PAR</abbr>. In the above example, the calculation becomes <span class="arithmatex">\(436 \div 1.422 = {\sim}307\)</span>. Therefore, the alternate display resolution of this file will be 718x307. Once again, this gives a similar Display aspect ratio: <span class="arithmatex">\(718 \div 307 = 2.339\)</span>. You can think of this alternate resolution as the video being downscaled instead of upscaled when rescaling the video from the storage resolution to the display resolution. Another way of visualizing this is: To rescale such a file, you can either stretch it horizontally or shrink it vertically. Stretching it horizontally is the usual way, while shrinking it vertically is the alternate way.</li>
+<li>
+<h4 id="13-using-dar">1.3 Using <abbr title="Display Aspect Ratio">DAR</abbr>:<a class="headerlink" href="#13-using-dar" title="Permanent link">#</a></h4>
+Instead of using <abbr title="Pixel Aspect Ratio">PAR</abbr>, take the <strong>precise</strong> <code>Display aspect ratio</code> from the Advanced mediainfo and multiply the height with it. This is in contrast to using the <abbr title="Pixel Aspect Ratio">PAR</abbr>, where we multiplied the <em>width</em> instead of the height. So, for the above example of a 718x436 file, the resulting width becomes <span class="arithmatex">\(436 \times 2.342 = 1021\)</span>, which is the same width we got using the <abbr title="Pixel Aspect Ratio">PAR</abbr> method. <em>However, I do not prefer this method</em>, simply because it is easier to spot an anamorphic file using the Pixel aspect ratio. If <abbr title="Pixel Aspect Ratio">PAR</abbr> is <strong>NOT</strong> 1.000, it is anamorphic.</li>
+</ul>
+</li>
+</ul>
+<pre class="mermaid"><code>      graph TD;
+        A["&lt;b&gt;Encode at storage resolution&lt;/b&gt; &lt;br /&gt; &lt;i&gt;Dimensions:&lt;/i&gt; 718x436 &lt;br /&gt; &lt;i&gt;PAR:&lt;/i&gt; 1.422 &lt;br /&gt; &lt;i&gt;DAR:&lt;/i&gt; 2.342 &lt;br /&gt; &lt;i&gt;SAR:&lt;/i&gt; 1.647"];
+        A --&gt;|"Method 1.1 (Using PAR)"| B["&lt;b&gt;Multiply the width with the PAR.&lt;/b&gt; &lt;br /&gt; &lt;u&gt;Calculation:&lt;/u&gt; 718 × 1.422 = 1021 &lt;br /&gt; &lt;u&gt;Result:&lt;/u&gt; 1021x436 &lt;br /&gt; &lt;u&gt;AR:&lt;/u&gt; 2.3417"];
+        A --&gt;|"Method 1.2 (Using PAR - Alt.)"| C["&lt;b&gt;Divide the height with the PAR.&lt;/b&gt; &lt;br /&gt; &lt;u&gt;Calculation:&lt;/u&gt; 436 ÷ 1.422 = 307 &lt;br /&gt; &lt;u&gt;Result:&lt;/u&gt; 718x307 &lt;br /&gt; &lt;u&gt;AR:&lt;/u&gt; 2.3387"];
+        A --&gt;|"Method 1.3 (Using DAR)"| D["&lt;b&gt;Multiply the height with the DAR.&lt;/b&gt; &lt;br /&gt; &lt;u&gt;Calculation:&lt;/u&gt; 436 × 2.342 = 1021 &lt;br /&gt; &lt;u&gt;Result:&lt;/u&gt; 1021x436 &lt;br /&gt; &lt;u&gt;AR:&lt;/u&gt; 2.342"];</code></pre>
+<details class="note">
+<summary>Correlation between <abbr title="Storage Aspect Ratio">SAR</abbr>, <abbr title="Display Aspect Ratio">DAR</abbr> and <abbr title="Pixel Aspect Ratio">PAR</abbr>:</summary>
+<p>This part is not directly relevant to taking screenshots, but it is being mentioned for the curious.</p>
+<ul>
+<li>Pay attention to the correlation between the display resolution of 1021x436 we got above and the first <code>Display aspect ratio</code> (<abbr title="Display Aspect Ratio">DAR</abbr>) in the Advanced mediainfo above: <span class="arithmatex">\(1021 \div 436 = {\sim}2.342\)</span>, which matches the first Display aspect ratio in the Advanced mediainfo. That first value is more precise, while the second one is a rounded value. The precise value is only shown in the Advanced mediainfo.</li>
+<li>A commonly known equation is <code>DAR = SAR × PAR</code>. The acronyms <code>DAR</code> and <code>PAR</code> have already been referenced above. <code>SAR</code> refers to the <code>Storage aspect ratio</code>. Simply put, it is the ratio of the (storage) width to the (storage) height.<ul>
+<li>For the sample file we chose above, its <abbr title="Storage Aspect Ratio">SAR</abbr> is <span class="arithmatex">\(718 \div 436 = {\sim}1.647\)</span>.</li>
+<li>Its <abbr title="Pixel Aspect Ratio">PAR</abbr> is already known to be 1.422.</li>
+<li>Therefore, its <abbr title="Display Aspect Ratio">DAR</abbr> = <span class="arithmatex">\(1.647 \times 1.422\)</span> which equals <span class="arithmatex">\(2.342\)</span>, which in turn, matches the value in the Advanced mediainfo.</li>
+</ul>
+</li>
+</ul>
+</details>
+<p><br /></p>
+<hr />
+<h3 id="further-reading-material"><strong>Further reading material:</strong><a class="headerlink" href="#further-reading-material" title="Permanent link">#</a></h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Pixel_aspect_ratio">https://en.wikipedia.org/wiki/Pixel_aspect_ratio</a></li>
+<li><a href="http://www.doom9.org/index.html?/aspectratios.htm">http://www.doom9.org/index.html?/aspectratios.htm</a></li>
+<li><a href="https://forum.doom9.org/showthread.php?t=176152">https://forum.doom9.org/showthread.php?t=176152</a></li>
+<li><a href="https://forum.doom9.org/showthread.php?t=111102">https://forum.doom9.org/showthread.php?t=111102</a></li>
+<li><a href="https://www.animemusicvideos.org/guides/avtech3/theory-videoaspectratios.html">https://www.animemusicvideos.org/guides/avtech3/theory-videoaspectratios.html</a></li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <i>Site Last Updated&colon; 07 May 2022</i>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "search.highlight"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
