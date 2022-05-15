@@ -1,0 +1,816 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../images/align-vertical-distribute.svg">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+    
+    
+      
+        <title>Demuxing Kino Lorber - The Nacho Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="brown">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-demux-kino-lorber-blu-ray-discs-properly" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="The Nacho Wiki" class="md-header__button md-logo" aria-label="The Nacho Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 2v2H2V2h20M7 10.5v3h10v-3H7M2 20v2h20v-2H2Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Nacho Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Demuxing Kino Lorber
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../video/screenshots/guidelines/" class="md-tabs__link">
+        Video
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Demuxing
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="The Nacho Wiki" class="md-nav__button md-logo" aria-label="The Nacho Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 2v2H2V2h20M7 10.5v3h10v-3H7M2 20v2h20v-2H2Z"/></svg>
+
+    </a>
+    The Nacho Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Video
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Video" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Video
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Screenshots
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Screenshots" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Screenshots
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../video/screenshots/guidelines/" class="md-nav__link">
+        General Guidelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../video/screenshots/anamorphic/" class="md-nav__link">
+        Anamorphic Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../video/screenshots/programs-choices/" class="md-nav__link">
+        Programs to Take Screenshots
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Demuxing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Demuxing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Demuxing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Kino Lorber BDs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Kino Lorber BDs
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-the-problem" class="md-nav__link">
+    Introduction to the problem:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-identify-if-the-disc-needs-special-demuxing" class="md-nav__link">
+    How to identify if the disc needs special demuxing:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-demux-properly" class="md-nav__link">
+    How to demux properly:
+  </a>
+  
+    <nav class="md-nav" aria-label="How to demux properly:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demuxing-the-m2ts-method" class="md-nav__link">
+    Demuxing the m2ts method:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demuxing-the-playlist-method" class="md-nav__link">
+    Demuxing the playlist method:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphic-to-summarize-the-problem" class="md-nav__link">
+    Graphic to summarize the problem:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-the-problem" class="md-nav__link">
+    Introduction to the problem:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-identify-if-the-disc-needs-special-demuxing" class="md-nav__link">
+    How to identify if the disc needs special demuxing:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-demux-properly" class="md-nav__link">
+    How to demux properly:
+  </a>
+  
+    <nav class="md-nav" aria-label="How to demux properly:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demuxing-the-m2ts-method" class="md-nav__link">
+    Demuxing the m2ts method:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demuxing-the-playlist-method" class="md-nav__link">
+    Demuxing the playlist method:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphic-to-summarize-the-problem" class="md-nav__link">
+    Graphic to summarize the problem:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="how-to-demux-kino-lorber-blu-ray-discs-properly"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.27 6.73-4.24 10.13-1.32-3.42-.32-.83-.82-.32-3.43-1.33 10.13-4.23M21 3 3 10.53v.97l6.84 2.66L12.5 21h.96L21 3Z"/></svg></span> <strong>How to demux Kino Lorber Blu-ray Discs properly</strong><a class="headerlink" href="#how-to-demux-kino-lorber-blu-ray-discs-properly" title="Permanent link">#</a></h1>
+<hr />
+<h3 id="introduction-to-the-problem"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>Introduction to the problem:</strong><a class="headerlink" href="#introduction-to-the-problem" title="Permanent link">#</a></h3>
+<p>Most Kino Lorber blu-ray discs need a special technique to demux the streams properly.</p>
+<p>Many distributors insert a few seconds long intro before the movie starts. This intro contains their logo and company name. However, Kino Lorber does it in a unique way unlike any other distributor, where their intro is silent and <strong>there is no audio track</strong>.</p>
+<p>Due to this, when you demux these discs, the audio of the main movie gets shifted earlier to the start of the intro. The same thing happens to the subtitles. The result is that you end up with a file which is now out of sync with both the audio and the subtitles.</p>
+<hr />
+<h3 id="how-to-identify-if-the-disc-needs-special-demuxing"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>How to identify if the disc needs special demuxing:</strong><a class="headerlink" href="#how-to-identify-if-the-disc-needs-special-demuxing" title="Permanent link">#</a></h3>
+<p>Not every Kino Lorber disc is authored in this way. Some do not have the intro. For instance, their "Kino Classics" line of releases are generally not authored in this way (or perhaps never).</p>
+<p>The length of the intro is always 264 frames, which at 23.976 FPS (or 24000/1001 FPS) is 11011ms.</p>
+<p>Use either <a href="https://www.videohelp.com/software/BDInfo">BDInfo</a> or <a href="https://www.videohelp.com/software/eac3to">eac3to</a> to see the contents of the playlist.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> BDInfo Program</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> BDInfo Scan Output</label><label for="__tabbed_1_3"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> eac3to</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Load the folder in the BDInfo application. If there is an 11 second file above the main movie m2ts, that is the intro.</p>
+<p><img alt="kinolorber-bdinfo-gui" src="../../images/demuxing/kinolorber-bdinfo-gui.png" title="Kino Lorber BDInfo GUI" /></p>
+</div>
+<div class="tabbed-block">
+<p>Same thing can be done with the <strong>FULL</strong> BDInfo text output.</p>
+<p>The full output contains the list of the files that the playlist is made up of. Again, look for an 11 second long file above the main movie.</p>
+<details class="example">
+<summary>Look for the highlighted line in the below output:</summary>
+<div class="highlight"><pre><span></span><code>    DISC INFO:
+
+    Disc Title:     Sample Disc
+    Disc Label:     Sample Disc
+    Disc Size:      20,000,000,000 bytes
+    Protection:     AACS
+    BDInfo:         0.7.5.5
+
+    PLAYLIST REPORT:
+
+    Name:                   00004.MPLS
+    Length:                 1:10:00.000 (h:m:s.ms)
+    Size:                   20,000,000,000 bytes
+    Total Bitrate:          25.00 Mbps
+
+    VIDEO:
+
+    Codec                   Bitrate             Description     
+    -----                   -------             -----------     
+    MPEG-4 AVC Video        20000 kbps          1080p / 23.976 fps / 16:9 / High Profile 4.1
+
+    AUDIO:
+
+    Codec                           Language        Bitrate         Description     
+    -----                           --------        -------         -----------     
+    DTS-HD Master Audio             English         1800 kbps       2.0 / 48 kHz /  1800 kbps / 16-bit (DTS Core: 2.0 / 48 kHz /  1509 kbps / 16-bit)
+    Dolby Digital Audio             English         192 kbps        2.0 / 48 kHz /   192 kbps / DN -31dB
+
+    SUBTITLES:
+
+    Codec                           Language        Bitrate         Description     
+    -----                           --------        -------         -----------     
+    Presentation Graphics           English         25.000 kbps                     
+
+    FILES:
+
+    Name            Time In         Length          Size            Total Bitrate   
+    ----            -------         ------          ----            -------------   
+<span class="hll">    00010.M2TS      0:00:00.000     0:00:11.010     712,704         518             
+</span>    00004.M2TS      0:00:11.010     1:10:00.000     20,000,000,000  20,000          
+    00000.M2TS      1:10:00.000     0:00:01.000     18,432          147             
+
+    CHAPTERS:
+
+    Number          Time In         Length          Avg Video Rate  Max 1-Sec Rate  Max 1-Sec Time  Max 5-Sec Rate  Max 5-Sec Time  Max 10Sec Rate  Max 10Sec Time  Avg Frame Size  Max Frame Size  Max Frame Time  
+    ------          -------         ------          --------------  --------------  --------------  --------------  --------------  --------------  --------------  --------------  --------------  --------------  
+    1               0:00:00.000     0:07:39.709     29,137 kbps     60,233 kbps     00:00:10.343    34,685 kbps     00:00:10.093    33,485 kbps     00:03:51.231    151,895 bytes   613,283 bytes   00:06:25.051    
+    2               0:07:39.709     0:06:54.789     30,063 kbps     41,644 kbps     00:14:02.925    34,095 kbps     00:11:06.916    33,755 kbps     00:11:06.916    156,737 bytes   675,345 bytes   00:14:02.967    
+    3               0:14:34.498     0:07:53.890     30,089 kbps     37,004 kbps     00:18:54.883    33,587 kbps     00:15:44.693    32,952 kbps     00:15:44.693    156,872 bytes   422,172 bytes   00:18:54.925    
+    4               0:22:28.388     0:07:00.545     29,334 kbps     47,682 kbps     00:27:30.231    38,843 kbps     00:25:39.162    34,737 kbps     00:25:38.912    152,935 bytes   624,995 bytes   00:27:30.315    
+    5               0:29:28.933     0:06:27.637     30,166 kbps     36,439 kbps     00:30:50.431    33,026 kbps     00:34:24.645    32,391 kbps     00:34:22.268    157,271 bytes   396,522 bytes   00:30:50.640    
+    6               0:35:56.571     0:07:52.805     30,292 kbps     38,355 kbps     00:42:52.486    35,655 kbps     00:42:51.485    33,487 kbps     00:42:51.485    157,926 bytes   479,900 bytes   00:40:42.231    
+    7               0:43:49.376     0:07:36.789     30,358 kbps     39,036 kbps     00:46:58.482    32,797 kbps     00:47:11.912    32,490 kbps     00:48:19.354    158,272 bytes   676,452 bytes   00:46:58.524    
+    8               0:51:26.166     0:08:54.408     30,503 kbps     37,811 kbps     00:52:38.113    33,426 kbps     00:58:40.767    32,757 kbps     00:58:37.931    159,029 bytes   539,954 bytes   00:52:38.154    
+    9               1:00:20.575     0:08:01.230     30,299 kbps     42,081 kbps     01:05:12.408    35,423 kbps     01:05:12.241    33,165 kbps     01:05:12.241    157,963 bytes   636,342 bytes   01:05:13.284    
+    10              1:08:21.806     0:05:39.964     30,188 kbps     40,834 kbps     01:12:30.095    35,139 kbps     01:11:19.984    34,075 kbps     01:11:18.732    157,388 bytes   495,962 bytes   01:12:30.137    
+    11              1:14:01.770     0:06:33.810     30,253 kbps     38,705 kbps     01:16:32.129    33,608 kbps     01:20:24.152    32,719 kbps     01:20:24.152    157,725 bytes   512,938 bytes   01:16:32.170    
+    12              1:20:35.580     0:07:34.328     17,366 kbps     42,406 kbps     01:21:03.733    35,693 kbps     01:21:00.856    34,043 kbps     01:20:55.767    90,545 bytes    663,919 bytes   01:23:01.434    
+
+    STREAM DIAGNOSTICS:
+
+    File            PID             Type            Codec           Language                Seconds                 Bitrate                 Bytes           Packets         
+    ----            ---             ----            -----           --------                --------------          --------------          -------------   -----           
+    00004.M2TS      4113 (0x1011)   0x1B            AVC                                     1000.000                28,978                  19,161,368,201  104,211,710     
+    00004.M2TS      4352 (0x1100)   0x80            LPCM            eng (English)           1000.000                2,311                   1,527,788,100   8,464,200       
+    00004.M2TS      4353 (0x1101)   0x86            DTS-HD MA       eng (English)           1000.000                3,441                   2,275,063,288   12,878,129      
+    00004.M2TS      4354 (0x1102)   0x80            LPCM            eng (English)           1000.000                2,310                   1,527,232,160   8,461,120       
+    00004.M2TS      4355 (0x1103)   0x80            LPCM            eng (English)           1000.000                2,311                   1,527,798,208   8,464,256       
+    00004.M2TS      4356 (0x1104)   0x80            LPCM            eng (English)           1000.000                2,311                   1,527,798,208   8,464,256       
+    00004.M2TS      4608 (0x1200)   0x90            PGS             eng (English)           1000.000                40                      26,238,832      151,220         
+</code></pre></div>
+</details>
+</div>
+<div class="tabbed-block">
+<p><strong>First scan the folder with eac3to.</strong>
+<div class="highlight"><pre><span></span><code>    D:\&gt;eac3to &quot;Sample Disc&quot;
+    1) 00004.mpls, 00010.m2ts+00004.m2ts+00000.m2ts, 1:10:00
+    - Chapters, 12 chapters
+    - h264/AVC, 1080p24 /1.001 (16:9)
+</code></pre></div></p>
+<p>That output means the main playlist <code>00004.mpls</code> is made up of three m2ts files: 00010 + 00004 + 00000, totaling a duration of 1:10:00.</p>
+<p><code>00004.m2ts</code> in a Kino Lorber disc is almost always the main movie. Since we see a different file: <code>00010.m2ts</code> before it, it's a good indicator that it's the intro.</p>
+<p><strong>To confirm whether it's the intro, we can look up the info of <code>00010.m2ts</code> using eac3to:</strong></p>
+<div class="highlight"><pre><span></span><code>    D:\&gt;eac3to &quot;Sample Disc\BDMV\STREAM\00010.m2ts&quot;
+    M2TS, 1 video track, 0:00:11, 24p /1.001
+    1: h264/AVC, 1080p24 /1.001 (16:9)
+</code></pre></div>
+<p>That output confirms that the duration of <code>00010.m2ts</code> is 0:00:11, or 11 seconds. Another interesting confirmation from that output is that <code>00010.m2ts</code> has only an h264 video stream. There is no other stream, like audio or subtitle.</p>
+<p>Of course, you can also just play <code>00010.m2ts</code> in a media player and check if it is 11 seconds long.</p>
+</div>
+</div>
+</div>
+<hr />
+<h3 id="how-to-demux-properly"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>How to demux properly:</strong><a class="headerlink" href="#how-to-demux-properly" title="Permanent link">#</a></h3>
+<p>There are two methods to get a properly playable file from such discs.</p>
+<p>The easier option is to demux <code>00004.m2ts</code> instead of the playlist. This method removes the intro completely. If you go this route, only the chapters will need to be manually adjusted.</p>
+<p>The other option is to demux the playlist as usual. This will keep the intro intact, so you need to apply a delay of <code>11011ms</code> to the audio and subtitles.</p>
+<ol>
+<li>
+<h4 id="demuxing-the-m2ts-method">Demuxing the m2ts method:<a class="headerlink" href="#demuxing-the-m2ts-method" title="Permanent link">#</a></h4>
+<ul>
+<li>
+<p><strong>Video &amp; Audio:</strong> Use your preferred demuxing tool to demux <code>00004.m2ts</code> directly.</p>
+<p>If you use eac3to, the command will be <code>eac3to "Sample Disc\BDMV\STREAM\00004.m2ts" -demux</code>.</p>
+<p>You can also drag and drop <code>00004.m2ts</code> in MKVToolnix GUI.</p>
+</li>
+<li>
+<p><strong>Chapters:</strong> The above commands will give you everything except the chapters. You need to get the chapters from the playlist.</p>
+<p>In eac3to, do either <code>eac3to "Sample Disc" 1) 1:chapters.txt</code> or <code>eac3to "Sample Disc\BDMV\PLAYLIST\00004.mpls" 1:chapters.txt</code>.</p>
+<p>Or in MKVToolnix GUI, switch to the <code>Chapter editor</code> tab and drag and drop the file <code>00004.mpls</code> from the folder <code>BDMV\PLAYLIST</code>.</p>
+<p>The same <code>Chapter editor</code> in MKVToolnix GUI can be used to adjust the chapters. Open the chapter file in there, right click on <code>Edition entry</code> and click on <code>Additional modifications</code>. Check the first field called <code>Shift start and end timestamps</code> and enter the value <code>-00:00:11.011</code> in the box.</p>
+<p><strong>Visual Animated Guide</strong> for adjusting the chapters: <a href="../../images/demuxing/kinolorber-chapters-adjust.gif">Click here</a></p>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="demuxing-the-playlist-method">Demuxing the playlist method:<a class="headerlink" href="#demuxing-the-playlist-method" title="Permanent link">#</a></h4>
+<p>Demux the usual way with <code>eac3to "Sample Disc" 1) -demux</code>.</p>
+<p>Then apply a delay to the audio(s) and subtitle(s).</p>
+<p>eac3to can be used for this.</p>
+<ul>
+<li><strong>Audio:</strong> <code>eac3to input.dtsma output.dtsma +11011ms</code></li>
+<li><strong>Subtitles:</strong> <code>eac3to input.sup output.sup +11011ms</code>.</li>
+</ul>
+<p>Chapters do not need any adjustment if you demuxed the playlist.</p>
+<p>Alternatively, you can instead set a delay of 11011ms in MKVToolnix when muxing the file. Of course don't apply the delay in both eac3to and MKVToolnix at the same time.</p>
+</li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Regardless of which method you used, always play the final file in a media player and check if everything is in sync.</p>
+</div>
+<hr />
+<h3 id="graphic-to-summarize-the-problem"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>Graphic to summarize the problem:</strong><a class="headerlink" href="#graphic-to-summarize-the-problem" title="Permanent link">#</a></h3>
+<p><img alt="Kino Lorber Graphic" src="../../images/demuxing/kinolorber-graphic.png" title="Kino Lorber graphic" /></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../video/screenshots/programs-choices/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Programs to Take Screenshots" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Programs to Take Screenshots
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <i>Site Last Updated&colon; 15 May 2022</i>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "search.highlight"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>
