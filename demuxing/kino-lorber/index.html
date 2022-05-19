@@ -13,7 +13,7 @@
     
     
       
-        <title>Demuxing Kino Lorber - The Nacho Wiki</title>
+        <title>Demuxing Kino Lorber Blu-ray Discs - The Nacho Wiki</title>
       
     
     
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Demuxing Kino Lorber
+              Demuxing Kino Lorber Blu-ray Discs
             
           </span>
         </div>
@@ -477,6 +477,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#for-encoders" class="md-nav__link">
+    For encoders:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#graphic-to-summarize-the-problem" class="md-nav__link">
     Graphic to summarize the problem:
   </a>
@@ -566,6 +573,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#for-encoders" class="md-nav__link">
+    For encoders:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#graphic-to-summarize-the-problem" class="md-nav__link">
     Graphic to summarize the problem:
   </a>
@@ -595,16 +609,19 @@
 <hr />
 <h3 id="how-to-identify-if-the-disc-needs-special-demuxing"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>How to identify if the disc needs special demuxing:</strong><a class="headerlink" href="#how-to-identify-if-the-disc-needs-special-demuxing" title="Permanent link">#</a></h3>
 <p>Not every Kino Lorber disc is authored in this way. Some do not have the intro. For instance, their "Kino Classics" line of releases are generally not authored in this way (or perhaps never).</p>
+<div class="admonition info">
+<p class="admonition-title">You need the special demux technique only if the disc has this 11 second intro before the movie.</p>
+</div>
 <p>The length of the intro is always 264 frames, which at 23.976 FPS (or 24000/1001 FPS) is 11011ms.</p>
-<p>Use either <a href="https://www.videohelp.com/software/BDInfo">BDInfo</a> or <a href="https://www.videohelp.com/software/eac3to">eac3to</a> to see the contents of the playlist.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> BDInfo Program</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> BDInfo Scan Output</label><label for="__tabbed_1_3"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> eac3to</label></div>
+<p>Use <a href="https://www.videohelp.com/software/BDInfo">BDInfo</a>, <a href="https://www.videohelp.com/software/eac3to">eac3to</a> or <a href="https://mediaarea.net/en/MediaInfo">mediainfo</a> to see the contents of the main playlist on the disc.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> BDInfo Program</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> BDInfo Scan Output</label><label for="__tabbed_1_3"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> eac3to</label><label for="__tabbed_1_4"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> mediainfo</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Load the folder in the BDInfo application. If there is an 11 second file above the main movie m2ts, that is the intro.</p>
 <p><img alt="kinolorber-bdinfo-gui" src="../../images/demuxing/kinolorber-bdinfo-gui.png" title="Kino Lorber BDInfo GUI" /></p>
 </div>
 <div class="tabbed-block">
-<p>Same thing can be done with the <strong>FULL</strong> BDInfo text output.</p>
+<p>Same thing can be done with the <strong>FULL</strong> (unabridged) BDInfo text output. This output is produced by both the regular BDInfo program and the CLI versions.</p>
 <p>The full output contains the list of the files that the playlist is made up of. Again, look for an 11 second long file above the main movie.</p>
 <details class="example">
 <summary>Look for the highlighted line in the below output:</summary>
@@ -695,8 +712,344 @@
     M2TS, 1 video track, 0:00:11, 24p /1.001
     1: h264/AVC, 1080p24 /1.001 (16:9)
 </code></pre></div>
-<p>That output confirms that the duration of <code>00010.m2ts</code> is 0:00:11, or 11 seconds. Another interesting confirmation from that output is that <code>00010.m2ts</code> has only an h264 video stream. There is no other stream, like audio or subtitle.</p>
-<p>Of course, you can also just play <code>00010.m2ts</code> in a media player and check if it is 11 seconds long.</p>
+<p>That output confirms that the duration of <code>00010.m2ts</code> is 0:00:11, or 11 seconds.</p>
+<p>Another interesting confirmation from that output is that <code>00010.m2ts</code> has only an h264 video stream. There is no other stream, like audio or subtitle.</p>
+<p>Of course, you can also just play <code>00010.m2ts</code> in a media player, or take its mediainfo, to check if it is 11 seconds long. </p>
+</div>
+<div class="tabbed-block">
+<p>This is not widely known, but mediainfo can also show you the different m2ts files that a blu-ray playlist is made up of.</p>
+<p><strong>Command:</strong> <code>mediainfo ~/bdfolder/BDMV/PLAYLIST/00004.mpls &gt; output.txt</code></p>
+<div class="admonition error">
+<p class="admonition-title">The full path of the mpls file must be used to get the proper output. <br /> Going to the PLAYLIST folder and using just the filename, like <code>mediainfo 00004.mpls</code>, produces an incomplete output.</p>
+</div>
+<details class="example">
+<summary>Mediainfo of a Kino Lorber disc's main playlist:</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span></pre></div></td><td class="code"><div><pre><span></span><code>  General
+  Complete name                            : /home/bdfolder/BDMV/PLAYLIST/00004.mpls
+  Format                                   : Blu-ray Playlist
+  File size                                : 534 Bytes
+  Duration                                 : 1 h 10 min
+  Overall bit rate mode                    : Variable
+  Overall bit rate                         : 1 b/s
+
+  Video #1
+  ID                                       : 4113 (0x1011)
+  Menu ID                                  : 1 (0x1)
+  Format                                   : AVC
+  Format/Info                              : Advanced Video Codec
+  Format profile                           : High@L4.1
+  Format settings                          : CABAC / 3 Ref Frames
+  Format settings, CABAC                   : Yes
+  Format settings, Reference frames        : 3 frames
+  Format settings, GOP                     : M=3, N=12
+  Codec ID                                 : 27
+<span class="hll">  Duration                                 : 11 s 11 ms
+</span>  Bit rate mode                            : Variable
+  Bit rate                                 : 492 kb/s
+  Maximum bit rate                         : 32.3 Mb/s
+  Width                                    : 1 920 pixels
+  Height                                   : 1 080 pixels
+  Display aspect ratio                     : 16:9
+  Frame rate                               : 23.976 (24000/1001) FPS
+  Standard                                 : NTSC
+  Color space                              : YUV
+  Chroma subsampling                       : 4:2:0
+  Bit depth                                : 8 bits
+  Scan type                                : Progressive
+  Bits/(Pixel*Frame)                       : 0.010
+  Stream size                              : 662 KiB
+  Color range                              : Limited
+  Color primaries                          : BT.709
+  Transfer characteristics                 : BT.709
+  Matrix coefficients                      : BT.709
+  format_identifier                        : HDMV
+<span class="hll">  Source                                   : 00010.m2ts
+</span>
+  Video #2
+  ID                                       : 4113 (0x1011)
+  Menu ID                                  : 1 (0x1)
+  Format                                   : AVC
+  Format/Info                              : Advanced Video Codec
+  Format profile                           : High@L4.1
+  Format settings                          : CABAC / 4 Ref Frames
+  Format settings, CABAC                   : Yes
+  Format settings, Reference frames        : 4 frames
+  Codec ID                                 : 27
+<span class="hll">  Duration                                 : 1 h 10 min
+</span>  Bit rate mode                            : Variable
+  Maximum bit rate                         : 38.0 Mb/s
+  Width                                    : 1 920 pixels
+  Height                                   : 1 080 pixels
+  Display aspect ratio                     : 16:9
+  Frame rate                               : 23.976 (24000/1001) FPS
+  Color space                              : YUV
+  Chroma subsampling                       : 4:2:0
+  Bit depth                                : 8 bits
+  Scan type                                : Progressive
+  format_identifier                        : HDMV
+<span class="hll">  Source                                   : 00004.m2ts
+</span>
+  Video #3
+  ID                                       : 4113 (0x1011)
+  Menu ID                                  : 1 (0x1)
+  Format                                   : AVC
+  Format/Info                              : Advanced Video Codec
+  Format profile                           : High@L4.1
+  Format settings                          : CABAC / 4 Ref Frames
+  Format settings, CABAC                   : Yes
+  Format settings, Reference frames        : 4 frames
+  Codec ID                                 : 27
+<span class="hll">  Duration                                 : 1 s 1 ms
+</span>  Bit rate mode                            : Variable
+  Maximum bit rate                         : 35.0 Mb/s
+  Width                                    : 1 920 pixels
+  Height                                   : 1 080 pixels
+  Display aspect ratio                     : 16:9
+  Frame rate                               : 23.976 (24000/1001) FPS
+  Standard                                 : NTSC
+  Color space                              : YUV
+  Chroma subsampling                       : 4:2:0
+  Bit depth                                : 8 bits
+  Scan type                                : Progressive
+  Color range                              : Limited
+  Color primaries                          : BT.709
+  Transfer characteristics                 : BT.709
+  Matrix coefficients                      : BT.709
+  format_identifier                        : HDMV
+<span class="hll">  Source                                   : 00000.m2ts
+</span>
+  Audio #1
+  ID                                       : 4352 (0x1100)
+  Menu ID                                  : 1 (0x1)
+  Format                                   : DTS XLL
+  Format/Info                              : Digital Theater Systems
+  Commercial name                          : DTS-HD Master Audio
+  Muxing mode                              : Stream extension
+  Codec ID                                 : 134
+<span class="hll">  Duration                                 : 1 h 10 min
+</span>  Bit rate mode                            : Variable
+  Channel(s)                               : 2 channels
+  Channel layout                           : L R
+  Sampling rate                            : 48.0 kHz
+  Frame rate                               : 93.750 FPS (512 SPF)
+  Bit depth                                : 16 bits
+  Compression mode                         : Lossless
+  Language                                 : English
+<span class="hll">  Source                                   : 00004.m2ts
+</span>
+  Audio #2
+  ID                                       : 4353 (0x1101)
+  Menu ID                                  : 1 (0x1)
+  Format                                   : AC-3
+  Format/Info                              : Audio Coding 3
+  Commercial name                          : Dolby Digital
+  Codec ID                                 : 129
+<span class="hll">  Duration                                 : 1 h 10 min
+</span>  Bit rate mode                            : Constant
+  Bit rate                                 : 192 kb/s
+  Channel(s)                               : 2 channels
+  Channel layout                           : L R
+  Sampling rate                            : 48.0 kHz
+  Frame rate                               : 31.250 FPS (1536 SPF)
+  Compression mode                         : Lossy
+  Stream size                              : 125 MiB
+  Language                                 : English
+  Service kind                             : Complete Main
+  bsid                                     : 8
+  Dialog Normalization                     : -31
+  Dialog Normalization                     : -31 dB
+  compr                                    : -0.28
+  compr                                    : -0.28 dB
+  dsurmod                                  : 0
+  acmod                                    : 2
+  lfeon                                    : 0
+  dialnorm_Average                         : -31
+  dialnorm_Average                         : -31 dB
+  dialnorm_Minimum                         : -31
+  dialnorm_Minimum                         : -31 dB
+  dialnorm_Maximum                         : -31
+  dialnorm_Maximum                         : -31 dB
+  dialnorm_Count                           : 673
+  format_identifier                        : AC-3
+<span class="hll">  Source                                   : 00004.m2ts
+</span>
+  Text
+  ID                                       : 4608 (0x1200)
+  Menu ID                                  : 1 (0x1)
+  Format                                   : PGS
+  Codec ID                                 : 144
+<span class="hll">  Duration                                 : 1 h 10 min
+</span>  Language                                 : English
+<span class="hll">  Source                                   : 00004.m2ts
+</span>
+  Menu
+  00:00:00.000                             : Chapter 1
+</code></pre></div></td></tr></table></div>
+</details>
+<p>The above output shows that the playlist <code>00004.mpls</code> consists of <code>00010.m2ts</code> of 11s11ms length + <code>00004.m2ts</code> of 1h10m length + <code>00000.m2ts</code> of 1s1ms length.</p>
+<p><strong>Sidenote:</strong> Taking <strong>advanced</strong> mediainfo using <code>mediainfo -f ~/bdfolder/BDMV/PLAYLIST/00004.mpls &gt; output.txt</code> will show you this pertinent line under the info of <code>00010.m2ts</code>:
+  <div class="highlight"><pre><span></span><code>  Frame count                              : 264
+</code></pre></div>
+Which reiterates the statement from earlier in this section — that the intro is 264 frames long.</p>
 </div>
 </div>
 </div>
@@ -716,10 +1069,16 @@
 </li>
 <li>
 <p><strong>Chapters:</strong> The above commands will give you everything except the chapters. You need to get the chapters from the playlist.</p>
-<p>In eac3to, do either <code>eac3to "Sample Disc" 1) 1:chapters.txt</code> or <code>eac3to "Sample Disc\BDMV\PLAYLIST\00004.mpls" 1:chapters.txt</code>.</p>
-<p>Or in MKVToolnix GUI, switch to the <code>Chapter editor</code> tab and drag and drop the file <code>00004.mpls</code> from the folder <code>BDMV\PLAYLIST</code>.</p>
-<p>The same <code>Chapter editor</code> in MKVToolnix GUI can be used to adjust the chapters. Open the chapter file in there, right click on <code>Edition entry</code> and click on <code>Additional modifications</code>. Check the first field called <code>Shift start and end timestamps</code> and enter the value <code>-00:00:11.011</code> in the box.</p>
+<ul>
+<li>
+<p><strong>Extracting chapters:</strong> In eac3to, do either <code>eac3to "Sample Disc" 1) 1:chapters.txt</code> or <code>eac3to "Sample Disc\BDMV\PLAYLIST\00004.mpls" 1:chapters.txt</code>.</p>
+<p>Or in MKVToolnix GUI, switch to the <code>Chapter editor</code> tab, and drag and drop the file <code>00004.mpls</code> from the folder <code>BDMV\PLAYLIST</code>.</p>
+</li>
+<li>
+<p><strong>Adjusting chapters:</strong> The same <code>Chapter editor</code> in MKVToolnix GUI can be used to adjust the timings of the chapters. Open the chapter file in there, right click on <code>Edition entry</code> and click on <code>Additional modifications</code>. Check the first field called <code>Shift start and end timestamps</code> and enter the value <code>-00:00:11.011</code> in the box.</p>
 <p><strong>Visual Animated Guide</strong> for adjusting the chapters: <a href="../../images/demuxing/kinolorber-chapters-adjust.gif">Click here</a></p>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -739,6 +1098,15 @@
 <div class="admonition danger">
 <p class="admonition-title">Regardless of which method you used, always play the final file in a media player and check if everything is in sync.</p>
 </div>
+<hr />
+<h3 id="for-encoders"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>For encoders:</strong><a class="headerlink" href="#for-encoders" title="Permanent link">#</a></h3>
+<p>If you downloaded a remux that is already out of sync by 11 seconds, and want to encode it, you can just trim the first 264 frames of the video in your script. If you go this route, you should not need to do any modification to the audio and subtitles.</p>
+<ul>
+<li><strong>AviSynth:</strong> <code>Trim(264, 0)</code></li>
+<li><strong>VapourSynth:</strong> <code>core.std.Trim(src, first=264)</code> OR <code>src  = src[264:]</code></li>
+</ul>
+<p>Remember that frames in AviSynth and VapourSynth start from 0 and not 1.</p>
+<p>To verify if you cut the intro properly, enable showing the frame info of your trimmed video using <code>MyLWLInfo()</code> / <code>LWLInfo()</code> / <code>awf.FrameInfo()</code>. If the first frame is an <strong>I-frame</strong>, the cutting was done correctly.</p>
 <hr />
 <h3 id="graphic-to-summarize-the-problem"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>Graphic to summarize the problem:</strong><a class="headerlink" href="#graphic-to-summarize-the-problem" title="Permanent link">#</a></h3>
 <p><img alt="Kino Lorber Graphic" src="../../images/demuxing/kinolorber-graphic.png" title="Kino Lorber graphic" /></p>
@@ -777,7 +1145,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <i>Site Last Updated&colon; 15 May 2022</i>
+      <i>Site Last Updated&colon; 18 May 2022</i>
     </div>
   
   

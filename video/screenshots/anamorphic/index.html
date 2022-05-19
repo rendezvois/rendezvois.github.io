@@ -737,6 +737,9 @@ Some lower quality Blu-ray content, especially Extras, are also anamorphically e
 <p>Some media players might display this file at an alternate display resolution, where instead of the width being multiplied, <strong>the height gets divided</strong> by the <abbr title="Pixel Aspect Ratio">PAR</abbr>.</p>
 <p>In the above example, the calculation becomes <span class="arithmatex">\(436 \div 1.422 = {\sim}307\)</span>. Therefore, the alternate display resolution of this file will be 718x307. Once again, this gives a similar Display aspect ratio: <span class="arithmatex">\(718 \div 307 = 2.339\)</span>.</p>
 <p>You can think of this alternate resolution as the video being downscaled instead of upscaled when rescaling the video from the storage resolution to the display resolution. <em>Another way of visualizing this is</em>: To rescale such a file, you can either stretch it horizontally or shrink it vertically. Stretching it horizontally is the usual way, while shrinking it vertically is the alternate way.</p>
+<div class="admonition note">
+<p class="admonition-title">Although this alternate method gives a technically valid resolution, but screenshots must be avoided in it. <br /> If you are ending up with such screenshots, try updating your software or using a different program from the choices listed in <a href="../programs-choices/">this page</a>.</p>
+</div>
 </li>
 <li>
 <h4 id="13-using-dar">1.3 Using <abbr title="Display Aspect Ratio">DAR</abbr>:<a class="headerlink" href="#13-using-dar" title="Permanent link">#</a></h4>
@@ -822,6 +825,7 @@ Some lower quality Blu-ray content, especially Extras, are also anamorphically e
 <li>Therefore, its <abbr title="Display Aspect Ratio">DAR</abbr> = <span class="arithmatex">\(1.647 \times 1.422\)</span> which equals <span class="arithmatex">\(2.342\)</span>, which in turn, matches the value in the Advanced mediainfo.</li>
 </ul>
 </li>
+<li><strong>Important:</strong> The <abbr title="Storage Aspect Ratio">SAR</abbr> above is not to be confused with the other acronym of the same name that stands for <code>Sample Aspect Ratio</code>. Sample Aspect Ratio is basically the same thing as <abbr title="Pixel Aspect Ratio">PAR</abbr>. It is used in encoding workflows, for example the <code>--sar</code> parameter in x264. See link number 6 in the section at the end for example.</li>
 </ul>
 </details>
 <hr />
@@ -971,7 +975,7 @@ Some lower quality Blu-ray content, especially Extras, are also anamorphically e
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <i>Site Last Updated&colon; 15 May 2022</i>
+      <i>Site Last Updated&colon; 18 May 2022</i>
     </div>
   
   
