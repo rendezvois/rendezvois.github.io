@@ -522,6 +522,19 @@
     VapourSynth
   </a>
   
+    <nav class="md-nav" aria-label="VapourSynth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#script" class="md-nav__link">
+    Script:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -767,6 +780,19 @@
     VapourSynth
   </a>
   
+    <nav class="md-nav" aria-label="VapourSynth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#script" class="md-nav__link">
+    Script:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -835,7 +861,10 @@ screenshot-template<span class="s">=&quot;%F-%p&quot;</span><span class="w"></sp
 <p class="admonition-title">Info</p>
 <p>The latest version of VLC takes screenshots correctly in display resolution for most types of files.</p>
 <p>But some DVDs authored with improper aspect ratio play properly only in VLC 2.1.5. See the section at the end for more details.</p>
-<p>Versions 2.2.0 to 2.2.4 take screenshots at Storage Resolution for all files, so they cannot be used for anamorphic files.</p>
+<p>Versions 2.2.0 to 2.2.4 take screenshots at storage resolution for all files, so they cannot be used for anamorphic files.</p>
+<div class="admonition error">
+<p><strong>However,</strong> VLC fails at taking screenshots using the proper color matrix conversions, resulting in screenshots with inaccurate colors. Therefore, it is advised to keep VLC as a backup option. Try one of the other programs on this page first for color-accurate screenshots.</p>
+</div>
 </div>
 <h4 id="setting-up-vlc">Setting up VLC:<a class="headerlink" href="#setting-up-vlc" title="Permanent link">#</a></h4>
 <ul>
@@ -870,8 +899,7 @@ screenshot-template<span class="s">=&quot;%F-%p&quot;</span><span class="w"></sp
 <h3 id="mpc-hc"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>MPC-HC</strong><a class="headerlink" href="#mpc-hc" title="Permanent link">#</a></h3>
 <p><a class="md-button" href="https://github.com/clsid2/mpc-hc/releases"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 8v8H5V8h10m1-2H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4V7a1 1 0 0 0-1-1Z"/></svg></span> Official Webpage</a></p>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Do <strong>NOT</strong> download from <a href="https://mpc-hc.org/">mpc-hc.org</a>. That is an old build which is no longer updated.</p>
+<p class="admonition-title">Do <strong>NOT</strong> download from <a href="https://mpc-hc.org/">mpc-hc.org</a>. That is an old build which is no longer updated.</p>
 </div>
 <h4 id="setting-up-mpc-hc">Setting up MPC-HC:<a class="headerlink" href="#setting-up-mpc-hc" title="Permanent link">#</a></h4>
 <ul>
@@ -925,11 +953,11 @@ screenshot-template<span class="s">=&quot;%F-%p&quot;</span><span class="w"></sp
 <p>Each example command below takes a screenshot of the file <code>input.mkv</code> at 5m30s mark with the filename <code>screenshot1.png</code></p>
 <ul>
 <li>
-<p><strong>Blu-ray and other HD sources:</strong> BT.709 color space
-    <div class="highlight"><pre><span></span><code>ffmpeg -ss 00:05:30.000 -i input.mkv -vf scale=in_h_chr_pos=0:in_v_chr_pos=128:flags=spline:in_color_matrix=bt709:flags=full_chroma_int+accurate_rnd -vframes 1 screenshot1.png
+<p><strong>Blu-ray and other HD sources; UHD Blu-ray (SDR):</strong> BT.709 color space
+    <div class="highlight"><pre><span></span><code>ffmpeg -ss 00:05:30.000 -i input.mkv -vf scale=in_h_chr_pos=0:in_v_chr_pos=128:flags=spline:in_color_matrix=bt709:flags=full_chroma_int+accurate_rnd -pix_fmt rgb24 -vframes 1 screenshot1.png
 </code></pre></div></p>
 <details class="info">
-<summary>Which files fall in the BT.709 color space?</summary>
+<summary>What falls under the BT.709 color space?</summary>
 <ul>
 <li>Almost all HD files, including those sourced from Blu-ray, HDTV and WEB-DLs.</li>
 <li>Many UHD files that are <strong>NOT</strong> HDR. Be careful with files from SDR UHD Blu-rays. Most of them are BT.709, but some rare ones are BT.2020. Check the file's mediainfo under <code>Matrix coefficients</code> to know the proper color matrix.</li>
@@ -939,81 +967,116 @@ screenshot-template<span class="s">=&quot;%F-%p&quot;</span><span class="w"></sp
 </li>
 <li>
 <p><strong>DVD and other SD sources:</strong> BT.601 color space
-    <div class="highlight"><pre><span></span><code>ffmpeg -ss 00:05:30.000 -i input.mkv -vf scale=in_h_chr_pos=0:in_v_chr_pos=128:flags=spline:in_color_matrix=bt601:flags=full_chroma_int+accurate_rnd -vframes 1 screenshot1.png
+    <div class="highlight"><pre><span></span><code>ffmpeg -ss 00:05:30.000 -i input.mkv -vf scale=in_h_chr_pos=0:in_v_chr_pos=128:flags=spline:in_color_matrix=bt601:flags=full_chroma_int+accurate_rnd -pix_fmt rgb24 -vframes 1 screenshot1.png
 </code></pre></div></p>
 <details class="info">
-<summary>Which files fall in the BT.601 color space?</summary>
+<summary>What falls under the BT.601 color space?</summary>
 <ul>
 <li>In addition to DVDs, almost all other SD sources like VHS, LaserDisc, TV.</li>
-<li>Some groups encode SD files sourced from Blu-ray with a color conversion from BT.709 to BT.601. Check if the <code>Matrix coefficients</code> in mediainfo says BT.601 or  BT.470 System B/G.</li>
+<li>Some groups encode SD files sourced from Blu-ray with a color conversion from BT.709 to BT.601. Such BT.601 files will say either <code>BT.601</code> or <code>BT.470 System B/G</code> under <code>Matrix coefficients</code> in mediainfo.</li>
 </ul>
 </details>
 </li>
 <li>
-<p><strong>UHD Blu-ray and HDR WEB-DL sources:</strong> BT.2020 color space
+<p><strong>UHD Blu-ray (HDR) and HDR WEB-DL sources:</strong> BT.2020 color space
     <div class="highlight"><pre><span></span><code>ffmpeg -ss 00:05:30.000 -i input.mkv -vf scale=in_h_chr_pos=0:in_v_chr_pos=0:flags=spline:in_color_matrix=bt2020:flags=full_chroma_int+accurate_rnd -pix_fmt rgb24 -vframes 1 screenshot1.png
 </code></pre></div></p>
-<p>The above command generates an 8-bit PNG, which is recommended.</p>
-<p>If you want to generate a 16-bit PNG, remove <code>-pix_fmt rgb24</code> from the command. But 16-bit PNGs can be more than 5 times bigger than 8-bit PNGs for identical or almost identical quality.</p>
 </li>
 </ul>
+<div class="admonition error">
+<p class="admonition-title">Note about bloated screenshots</p>
+<p>With default settings, FFmpeg generates 16-bit PNG images whenever the video is 10-bit.</p>
+<p>The above commands force the PNG to be 8-bit, which is recommended because 16-bit PNGs can be more than 5 times bigger for identical or almost identical quality.</p>
+<p>If you wish to generate 16-bit PNGs, remove <code>-pix_fmt rgb24</code> from the commands.</p>
+</div>
 <hr />
 <h3 id="avisynth-with-avspmod"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>AviSynth+ (with AvsPmod)</strong><a class="headerlink" href="#avisynth-with-avspmod" title="Permanent link">#</a></h3>
-<p>How to set up AviSynth and AvsPmod is beyond the scope of this wiki.</p>
+<p>How to set up AviSynth+ and AvsPmod is beyond the scope of this wiki.</p>
 <p>You should be using <a href="https://github.com/AviSynth/AviSynthPlus/releases">AviSynth+</a> and <a href="https://github.com/gispos/AvsPmod/releases">AvsPmod GPo build</a>.</p>
 <p>For the decoder, <a href="https://github.com/HomeOfAviSynthPlusEvolution/L-SMASH-Works/releases">L-SMASH-Works</a>, <a href="https://github.com/FFMS/ffms2/releases">ffms2</a> or <a href="https://www.rationalqm.us/dgdecnv/dgdecnv.html">DGDecNV</a> should be used. <a href="https://github.com/Asd-g/MPEG2DecPlus">d2vsource</a> can be used for MPEG-2 sources like DVDs.</p>
 <h4 id="taking-the-screenshots_4">Taking the screenshots:<a class="headerlink" href="#taking-the-screenshots_4" title="Permanent link">#</a></h4>
 <p>Create the following script in AvsPmod and save the image by right clicking on the video and selecting <code>Save image as...</code></p>
 <ul>
-<li><strong>BT.709 files:</strong>
+<li><strong>BT.709 video:</strong>
       <div class="highlight"><pre><span></span><code>LWLibavVideoSource(&quot;input.mkv&quot;)
 ConvertToRGB(matrix=&quot;Rec709&quot;)
 </code></pre></div></li>
-<li><strong>BT.601 files:</strong>
+<li><strong>BT.601 video:</strong>
       <div class="highlight"><pre><span></span><code>LWLibavVideoSource(&quot;input.mkv&quot;)
 ConvertToRGB(matrix=&quot;Rec601&quot;)
 </code></pre></div></li>
-<li><strong>BT.2020 files:</strong>
+<li><strong>BT.2020 video:</strong>
       <div class="highlight"><pre><span></span><code>LWLibavVideoSource(&quot;input.mkv&quot;)
 ConvertToRGB(matrix=&quot;Rec2020&quot;)
 </code></pre></div></li>
 </ul>
 <p>Replace <code>LWLibavVideoSource</code> with <code>FFVideoSource</code> if you are using ffms2. And so on for the other decoders.</p>
+<details class="info">
+<summary>For anamorphic files</summary>
+<p>For <a href="../anamorphic/"><strong>anamorphic files</strong></a>, add the following line after importing the file. This will resize the video from the storage to the display resolution.
+<div class="highlight"><pre><span></span><code>z_ConvertFormat(FFSAR_NUM &gt; FFSAR_DEN ? 2 * round(Float(Width) * FFSAR_NUM / FFSAR_DEN / 2) : Width, FFSAR_NUM &lt; FFSAR_DEN ? 2 * round(Height * FFSAR_DEN / FFSAR_NUM / 2) : Height, resample_filter=&quot;spline36&quot;, dither_type=&quot;error_diffusion&quot;)
+</code></pre></div></p>
+<hr />
+<p>Alternatively, if you already know what the display resolution of the file is supposed to be, use the following:
+<div class="highlight"><pre><span></span><code>z_ConvertFormat(width, height, resample_filter=&quot;spline36&quot;, dither_type=&quot;error_diffusion&quot;)
+</code></pre></div>
+Replace <code>width</code> and <code>height</code> with the proper dimensions. Each dimension needs to be a multiple of 2.</p>
+<p><strong>Remember that this line needs to come before the <code>ConvertToRGB</code> line.</strong></p>
+</details>
 <hr />
 <h3 id="vapoursynth"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>VapourSynth</strong><a class="headerlink" href="#vapoursynth" title="Permanent link">#</a></h3>
 <p>For the decoder, <a href="https://github.com/HomeOfAviSynthPlusEvolution/L-SMASH-Works/releases">L-SMASH-Works</a>, <a href="https://github.com/FFMS/ffms2/releases">ffms2</a> or <a href="https://www.rationalqm.us/dgdecnv/dgdecnv.html">DGDecNV</a> should be used. <a href="https://github.com/dwbuiten/d2vsource">d2vsource</a> can be used for MPEG-2 sources like DVDs.</p>
-<p>The following scripts have a <code>SetFrameProp</code> line inserted to explicitly identify the color space of the file.</p>
-<p>The line can be safely removed if your video is already tagged with the color matrix, i.e. your file's mediainfo contains a <code>Matrix coefficients</code> line.</p>
-<p>The color matrix values have been taken from <a href="http://vapoursynth.com/doc/functions/video/resize.html">VapourSynth's documentation</a>. Look at the table titled <code>Matrix coefficients (ITU-T H.265 Table E.5)</code>.</p>
-<ul>
-<li><strong>BT.709 files:</strong>
-      <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">vapoursynth</span> <span class="k">as</span> <span class="nn">vs</span>
-<span class="n">core</span> <span class="o">=</span> <span class="n">vs</span><span class="o">.</span><span class="n">core</span>
-
-<span class="n">src</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">lsmas</span><span class="o">.</span><span class="n">LWLibavSource</span><span class="p">(</span><span class="s1">&#39;input.mkv&#39;</span><span class="p">)</span>
-<span class="n">src</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">SetFrameProp</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="s2">&quot;_Matrix&quot;</span><span class="p">,</span> <span class="n">intval</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">src</span><span class="o">.</span><span class="n">set_output</span><span class="p">()</span>
-</code></pre></div></li>
-<li><strong>BT.601 files:</strong>
-      <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">vapoursynth</span> <span class="k">as</span> <span class="nn">vs</span>
-<span class="n">core</span> <span class="o">=</span> <span class="n">vs</span><span class="o">.</span><span class="n">core</span>
-
-<span class="n">src</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">lsmas</span><span class="o">.</span><span class="n">LWLibavSource</span><span class="p">(</span><span class="s1">&#39;input.mkv&#39;</span><span class="p">)</span>
-<span class="n">src</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">SetFrameProp</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="s2">&quot;_Matrix&quot;</span><span class="p">,</span> <span class="n">intval</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">src</span><span class="o">.</span><span class="n">set_output</span><span class="p">()</span>
-</code></pre></div></li>
-<li><strong>BT.2020 files:</strong>
-      <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">vapoursynth</span> <span class="k">as</span> <span class="nn">vs</span>
-<span class="n">core</span> <span class="o">=</span> <span class="n">vs</span><span class="o">.</span><span class="n">core</span>
-
-<span class="n">src</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">lsmas</span><span class="o">.</span><span class="n">LWLibavSource</span><span class="p">(</span><span class="s1">&#39;input.mkv&#39;</span><span class="p">)</span>
-<span class="n">src</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">SetFrameProp</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="s2">&quot;_Matrix&quot;</span><span class="p">,</span> <span class="n">intval</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
-<span class="n">src</span><span class="o">.</span><span class="n">set_output</span><span class="p">()</span>
-</code></pre></div></li>
-</ul>
-<p>Load the script and save the images using your previewer of choice, whether it is <a href="https://github.com/YomikoR/VapourSynth-Editor">VSEdit</a>, <a href="https://github.com/Irrational-Encoding-Wizardry/vs-preview">vspreview</a>, or something else. Even <a href="https://github.com/gispos/AvsPmod/releases">AvsPmod GPo</a> has reasonably good support for VapourSynth scripts.</p>
 <div class="admonition info">
-<p class="admonition-title">Also refer to the <a href="https://silentaperture.gitlab.io/mdbook-guide/encoding/screenshots.html">silentaperture guide</a> for some neat tips and functions regarding screenshots.</p>
+<p class="admonition-title">About SetFrameProp</p>
+<p>The following scripts have a <code>SetFrameProp</code> line inserted to explicitly set the color matrix of the video, unless the video is already tagged with a color matrix.</p>
+<p><strong>Set <code>intval</code> to 1 for BT.709, 5 for BT.601, and 9 for BT.2020.</strong></p>
+<p>The color matrix values have been taken from <a href="http://vapoursynth.com/doc/functions/video/resize.html">VapourSynth's documentation</a>. Look at the table titled <code>Matrix coefficients (ITU-T H.265 Table E.5)</code>.</p>
+</div>
+<h4 id="script"><strong>Script:</strong><a class="headerlink" href="#script" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">vapoursynth</span> <span class="k">as</span> <span class="nn">vs</span>
+<span class="n">core</span> <span class="o">=</span> <span class="n">vs</span><span class="o">.</span><span class="n">core</span>
+
+<span class="n">src</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">lsmas</span><span class="o">.</span><span class="n">LWLibavSource</span><span class="p">(</span><span class="s1">&#39;input.mkv&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">src</span><span class="o">.</span><span class="n">get_frame</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s1">&#39;_Matrix&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>    <span class="c1"># Matrix value of 2 means unspecified matrix</span>
+    <span class="n">src</span> <span class="o">=</span> <span class="n">core</span><span class="o">.</span><span class="n">std</span><span class="o">.</span><span class="n">SetFrameProp</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="s2">&quot;_Matrix&quot;</span><span class="p">,</span> <span class="n">intval</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">src</span><span class="o">.</span><span class="n">set_output</span><span class="p">()</span>
+</code></pre></div>
+<details class="info">
+<summary>For anamorphic files</summary>
+<p>For <a href="../anamorphic/"><strong>anamorphic files</strong></a>, define the following function in your script to resize the video from the storage to the display resolution.
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resizeDAR</span><span class="p">(</span><span class="n">clip</span><span class="p">:</span> <span class="n">vs</span><span class="o">.</span><span class="n">VideoNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">vs</span><span class="o">.</span><span class="n">VideoNode</span><span class="p">:</span>
+
+    <span class="n">f</span> <span class="o">=</span> <span class="n">clip</span><span class="o">.</span><span class="n">get_frame</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># Assume the first frame is representative of the whole stream                                                     </span>
+
+    <span class="k">if</span> <span class="s1">&#39;_SARDen&#39;</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">props</span> <span class="ow">and</span> <span class="s1">&#39;_SARNum&#39;</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">props</span><span class="p">:</span>
+        <span class="n">ffsar_num</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s1">&#39;_SARNum&#39;</span><span class="p">])</span>
+        <span class="n">ffsar_den</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s1">&#39;_SARDen&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Resize, if necessary                                                                                                                  </span>
+    <span class="k">if</span> <span class="n">ffsar_num</span> <span class="o">==</span> <span class="n">ffsar_den</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">clip</span>                <span class="c1"># No modification if the clip isn&#39;t anamorphic</span>
+    <span class="k">elif</span> <span class="n">ffsar_num</span> <span class="o">&gt;</span> <span class="n">ffsar_den</span><span class="p">:</span>
+        <span class="n">output_width</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">clip</span><span class="o">.</span><span class="n">width</span><span class="p">)</span> <span class="o">*</span> <span class="n">ffsar_num</span> <span class="o">/</span> <span class="n">ffsar_den</span><span class="p">)</span>
+        <span class="n">output_height</span> <span class="o">=</span> <span class="n">clip</span><span class="o">.</span><span class="n">height</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">output_width</span> <span class="o">=</span> <span class="n">clip</span><span class="o">.</span><span class="n">width</span>
+        <span class="n">output_height</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">clip</span><span class="o">.</span><span class="n">height</span><span class="p">)</span> <span class="o">*</span> <span class="n">ffsar_den</span> <span class="o">/</span> <span class="n">ffsar_num</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">core</span><span class="o">.</span><span class="n">resize</span><span class="o">.</span><span class="n">Spline36</span><span class="p">(</span><span class="n">clip</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">output_width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">output_height</span><span class="p">,</span> <span class="n">dither_type</span><span class="o">=</span><span class="s1">&#39;error_diffusion&#39;</span><span class="p">)</span>
+</code></pre></div>
+This function can now be used to resize any clip to display resolution by using <code>src = resizeDAR(src)</code></p>
+<hr />
+<p>Alternatively, if you already know what the display resolution of the file is supposed to be, use the following:
+<div class="highlight"><pre><span></span><code>src = core.resize.Spline36(src, width=XXX, height=YYY, dither_type=&#39;error_diffusion&#39;)
+</code></pre></div>
+Replace <code>XXX</code> and <code>YYY</code> with the proper dimensions. Each dimension needs to be a multiple of 2.</p>
+</details>
+<p>Load the script and save the images using your previewer of choice, whether it is <a href="https://github.com/YomikoR/VapourSynth-Editor">VSEdit</a>, <a href="https://github.com/Irrational-Encoding-Wizardry/vs-preview">vspreview</a>, or something else. Even <a href="https://github.com/gispos/AvsPmod/releases">AvsPmod GPo</a> has reasonably good support for VapourSynth scripts.</p>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Also refer to the <a href="https://silentaperture.gitlab.io/mdbook-guide/encoding/screenshots.html">silentaperture guide</a> for some neat tips and functions regarding screenshots in VapourSynth.</p>
 </div>
 <hr />
 <h2 id="further-reading-material"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 4A1.5 1.5 0 0 0 12 5.5 1.5 1.5 0 0 0 13.5 7 1.5 1.5 0 0 0 15 5.5 1.5 1.5 0 0 0 13.5 4m-.36 4.77c-1.19.1-4.44 2.69-4.44 2.69-.2.15-.14.14.02.42.16.27.14.29.33.16.2-.13.53-.34 1.08-.68 2.12-1.36.34 1.78-.57 7.07-.36 2.62 2 1.27 2.61.87.6-.39 2.21-1.5 2.37-1.61.22-.15.06-.27-.11-.52-.12-.17-.24-.05-.24-.05-.65.43-1.84 1.33-2 .76-.19-.57 1.03-4.48 1.7-7.17.11-.64.41-2.04-.75-1.94Z"/></svg></span> Further reading material:<a class="headerlink" href="#further-reading-material" title="Permanent link">#</a></h2>
