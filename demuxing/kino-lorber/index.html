@@ -700,17 +700,17 @@ File            PID             Type            Codec           Language        
 </div>
 <div class="tabbed-block">
 <p><strong>First scan the folder with eac3to.</strong>
-<div class="highlight"><pre><span></span><code>    D:\&gt;eac3to &quot;Sample Disc&quot;
-    1) 00004.mpls, 00010.m2ts+00004.m2ts+00000.m2ts, 1:10:00
-    - Chapters, 12 chapters
-    - h264/AVC, 1080p24 /1.001 (16:9)
+<div class="highlight"><pre><span></span><code>D:\&gt;eac3to &quot;Sample Disc&quot;
+1) 00004.mpls, 00010.m2ts+00004.m2ts+00000.m2ts, 1:10:00
+- Chapters, 12 chapters
+- h264/AVC, 1080p24 /1.001 (16:9)
 </code></pre></div></p>
 <p>That output means the main playlist <code>00004.mpls</code> is made up of three m2ts files: 00010 + 00004 + 00000, totaling a duration of 1:10:00.</p>
 <p><code>00004.m2ts</code> in a Kino Lorber disc is almost always the main movie. Since we see a different file: <code>00010.m2ts</code> before it, it's a good indicator that it's the intro.</p>
 <p><strong>To confirm whether it's the intro, we can look up the info of <code>00010.m2ts</code> using eac3to:</strong></p>
-<div class="highlight"><pre><span></span><code>    D:\&gt;eac3to &quot;Sample Disc\BDMV\STREAM\00010.m2ts&quot;
-    M2TS, 1 video track, 0:00:11, 24p /1.001
-    1: h264/AVC, 1080p24 /1.001 (16:9)
+<div class="highlight"><pre><span></span><code>D:\&gt;eac3to &quot;Sample Disc\BDMV\STREAM\00010.m2ts&quot;
+M2TS, 1 video track, 0:00:11, 24p /1.001
+1: h264/AVC, 1080p24 /1.001 (16:9)
 </code></pre></div>
 <p>That output confirms that the duration of <code>00010.m2ts</code> is 0:00:11, or 11 seconds.</p>
 <p>Another interesting confirmation from that output is that <code>00010.m2ts</code> has only an h264 video stream. There is no other stream, like audio or subtitle.</p>
@@ -1145,7 +1145,7 @@ Which reiterates the statement from earlier in this section — that the intro i
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <i>Site Last Updated&colon; 18 May 2022</i>
+      <i>Site Last Updated&colon; 20 May 2022</i>
     </div>
   
   
