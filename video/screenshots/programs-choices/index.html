@@ -55,7 +55,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="brown">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
   
     
     
@@ -173,18 +173,11 @@
   
   
   
-    
-
-  
-  
-  
     <li class="md-tabs__item">
-      <a href="../guidelines/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../anamorphic/" class="md-tabs__link md-tabs__link--active">
         Video
       </a>
     </li>
-  
-
   
 
       
@@ -291,6 +284,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../anamorphic/" class="md-nav__link">
+        Anamorphic Video
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -298,18 +305,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_2_1">
+        <label class="md-nav__link" for="__nav_2_2">
           Screenshots
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Screenshots" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
+        <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           Screenshots
         </label>
@@ -323,20 +330,6 @@
     <li class="md-nav__item">
       <a href="../guidelines/" class="md-nav__link">
         General Guidelines
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../anamorphic/" class="md-nav__link">
-        Anamorphic Files
       </a>
     </li>
   
@@ -471,11 +464,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#color-spaces" class="md-nav__link">
-    Color Spaces
+  <a href="#color-matrix" class="md-nav__link">
+    Color Matrix
   </a>
   
-    <nav class="md-nav" aria-label="Color Spaces">
+    <nav class="md-nav" aria-label="Color Matrix">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -763,11 +756,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#color-spaces" class="md-nav__link">
-    Color Spaces
+  <a href="#color-matrix" class="md-nav__link">
+    Color Matrix
   </a>
   
-    <nav class="md-nav" aria-label="Color Spaces">
+    <nav class="md-nav" aria-label="Color Matrix">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -992,8 +985,8 @@ screenshot-template<span class="s">=&quot;%F-%p&quot;</span><span class="w"></sp
 <li><strong>Visual Animated Guide:</strong> <a href="../../../images/video/screenshots/mpchc-save.gif">Click here</a></li>
 </ul>
 <hr />
-<h3 id="color-spaces"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>Color Spaces</strong><a class="headerlink" href="#color-spaces" title="Permanent link">#</a></h3>
-<p>Before we can go into the more advanced tools like FFmpeg, AviSynth+ and Vapoursynth, here is a brief classification of the three main video color spaces:</p>
+<h3 id="color-matrix"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>Color Matrix</strong><a class="headerlink" href="#color-matrix" title="Permanent link">#</a></h3>
+<p>Before we can go into the more advanced tools like FFmpeg, AviSynth+ and Vapoursynth, here is a brief classification of the three main video color matrices:</p>
 <h4 id="bt709"><strong>BT.709:</strong><a class="headerlink" href="#bt709" title="Permanent link">#</a></h4>
 <ul>
 <li>Almost all HD content, including those sourced from Blu-ray, HDTV and WEB-DLs (except HDR WEB-DLs).</li>
@@ -1010,10 +1003,113 @@ screenshot-template<span class="s">=&quot;%F-%p&quot;</span><span class="w"></sp
 <li>Almost all HDR content, including UHD Blu-ray and HD/UHD WEB-DLs.</li>
 <li>Some rare SDR UHD Blu-rays.</li>
 </ul>
+<details class="example">
+<summary>How to check mediainfo for color matrix:</summary>
+<p><strong>Look at the <code>Matrix coefficients</code> part in the video stream's mediainfo.</strong></p>
+<p>If there is no such line in the mediainfo, follow the classification mentioned above.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> BT.709</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> BT.601</label><label for="__tabbed_1_3"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> BT.2020</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Video
+ID                                       : 1
+Format                                   : AVC
+Format/Info                              : Advanced Video Codec
+Format profile                           : High@L4
+Format settings                          : CABAC / 4 Ref Frames
+Format settings, CABAC                   : Yes
+Format settings, Reference frames        : 4 frames
+Codec ID                                 : V_MPEG4/ISO/AVC
+Duration                                 : 1 h 30 min
+Bit rate                                 : 4 245 kb/s
+Width                                    : 1 920 pixels
+Height                                   : 800 pixels
+Display aspect ratio                     : 2.40:1
+Frame rate mode                          : Constant
+Frame rate                               : 23.976 (24000/1001) FPS
+Color space                              : YUV
+Chroma subsampling                       : 4:2:0
+Bit depth                                : 8 bits
+Scan type                                : Progressive
+Bits/(Pixel*Frame)                       : 0.115
+Stream size                              : 3.24 GiB (87%)
+Default                                  : Yes
+Forced                                   : No
+Color range                              : Limited
+Color primaries                          : BT.709
+Transfer characteristics                 : BT.709
+<span class="hll">Matrix coefficients                      : BT.709
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Video
+ID                                       : 1
+Format                                   : AVC
+Format/Info                              : Advanced Video Codec
+Format profile                           : High@L4.1
+Format settings                          : CABAC / 16 Ref Frames
+Format settings, CABAC                   : Yes
+Format settings, ReFrames                : 16 frames
+Codec ID                                 : V_MPEG4/ISO/AVC
+Duration                                 : 1h 35mn
+Bit rate                                 : 2 003 Kbps
+Width                                    : 720 pixels
+Height                                   : 362 pixels
+Display aspect ratio                     : 2.35:1
+Frame rate mode                          : Constant
+Frame rate                               : 23.976 (24000/1001) fps
+Color space                              : YUV
+Chroma subsampling                       : 4:2:0
+Bit depth                                : 8 bits
+Scan type                                : Progressive
+Bits/(Pixel*Frame)                       : 0.321
+Stream size                              : 1.34 GiB (90%)
+Default                                  : Yes
+Forced                                   : No
+Color range                              : Limited
+Color primaries                          : BT.601 NTSC
+<span class="hll">Matrix coefficients                      : BT.601
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Video
+ID                                       : 1
+ID in the original source medium         : 4113 (0x1011)
+Format                                   : HEVC
+Format/Info                              : High Efficiency Video Coding
+Format profile                           : Main 10@L5.1@High
+HDR format                               : SMPTE ST 2086, HDR10 compatible
+Codec ID                                 : V_MPEGH/ISO/HEVC
+Duration                                 : 1 h 55 min
+Bit rate                                 : 49.9 Mb/s
+Width                                    : 3 840 pixels
+Height                                   : 2 160 pixels
+Display aspect ratio                     : 16:9
+Frame rate mode                          : Constant
+Frame rate                               : 23.976 (24000/1001) FPS
+Color space                              : YUV
+Chroma subsampling                       : 4:2:0 (Type 2)
+Bit depth                                : 10 bits
+Bits/(Pixel*Frame)                       : 0.251
+Stream size                              : 40.4 GiB (90%)
+Default                                  : Yes
+Forced                                   : No
+Color range                              : Limited
+Color primaries                          : BT.2020
+Transfer characteristics                 : PQ
+<span class="hll">Matrix coefficients                      : BT.2020 non-constant
+</span>Mastering display color primaries        : Display P3
+Mastering display luminance              : min: 0.0001 cd/m2, max: 1000 cd/m2
+Maximum Content Light Level              : 1022 cd/m2
+Maximum Frame-Average Light Level        : 293 cd/m2
+</code></pre></div>
+</div>
+</div>
+</div>
+</details>
 <hr />
 <h3 id="ffmpeg"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>FFmpeg</strong><a class="headerlink" href="#ffmpeg" title="Permanent link">#</a></h3>
 <p><a class="md-button" href="https://ffmpeg.org/download.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 8v8H5V8h10m1-2H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4V7a1 1 0 0 0-1-1Z"/></svg></span> Official Webpage</a></p>
-<p>Installing or setting up FFmpeg will not be covered here because plenty of tutorials can be found from a Google search.</p>
+<p>Installing FFmpeg will not be covered here because plenty of tutorials can be found from a Google search.</p>
 <details class="example">
 <summary>Try any of these tutorials for example:</summary>
 <ul>
@@ -1038,7 +1134,7 @@ screenshot-template<span class="s">=&quot;%F-%p&quot;</span><span class="w"></sp
 <p>Therefore, only the standalone commands are being covered below, which means you will need to manually select the proper command for the type of file you have.</p>
 <h4 id="commands">Commands:<a class="headerlink" href="#commands" title="Permanent link">#</a></h4>
 <p><strong>BT.709 video:</strong></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> Single screenshot</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> Multiple screenshots</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 19v-3h8v3h-8m-4.5-6L2.47 7h4.24l4.96 4.95c.58.59.58 1.55 0 2.12L6.74 19H2.5l6-6Z"/></svg></span> Single screenshot</label><label for="__tabbed_2_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 19v-3h8v3h-8m-4.5-6L2.47 7h4.24l4.96 4.95c.58.59.58 1.55 0 2.12L6.74 19H2.5l6-6Z"/></svg></span> Multiple screenshots</label><label for="__tabbed_2_3"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 19v-3h8v3h-8m-4.5-6L2.47 7h4.24l4.96 4.95c.58.59.58 1.55 0 2.12L6.74 19H2.5l6-6Z"/></svg></span> Single screenshot (non-anamorphic)</label><label for="__tabbed_2_4"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 19v-3h8v3h-8m-4.5-6L2.47 7h4.24l4.96 4.95c.58.59.58 1.55 0 2.12L6.74 19H2.5l6-6Z"/></svg></span> Multiple screenshots (non-anamorphic)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nx">ffmpeg</span><span class="w"> </span><span class="o">-</span><span class="nx">ss</span><span class="w"> </span><span class="mo">00</span><span class="o">:</span><span class="mo">05</span><span class="o">:</span><span class="mo">00</span><span class="mf">.000</span><span class="w"> </span><span class="o">-</span><span class="nx">i</span><span class="w"> </span><span class="s2">&quot;input.mkv&quot;</span><span class="w"> </span><span class="o">-</span><span class="nx">vf</span><span class="w"> </span><span class="nx">scale</span><span class="o">=</span><span class="s1">&#39;max(sar,1)*iw&#39;</span><span class="o">:</span><span class="s1">&#39;max(1/sar,1)*ih&#39;</span><span class="o">:</span><span class="nx">in_h_chr_pos</span><span class="o">=</span><span class="mf">0</span><span class="o">:</span><span class="nx">in_v_chr_pos</span><span class="o">=</span><span class="mf">128</span><span class="o">:</span><span class="nx">in_color_matrix</span><span class="o">=</span><span class="nx">bt709</span><span class="o">:</span><span class="nx">flags</span><span class="o">=</span><span class="nx">full_chroma_int</span><span class="o">+</span><span class="nx">full_chroma_inp</span><span class="o">+</span><span class="nx">accurate_rnd</span><span class="o">+</span><span class="nx">spline</span><span class="w"> </span><span class="o">-</span><span class="nx">pix_fmt</span><span class="w"> </span><span class="nx">rgb24</span><span class="w"> </span><span class="o">-</span><span class="nx">vframes</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="nx">screenshot1</span><span class="p">.</span><span class="nx">png</span><span class="w"></span>
@@ -1048,10 +1144,21 @@ screenshot-template<span class="s">=&quot;%F-%p&quot;</span><span class="w"></sp
 <div class="highlight"><pre><span></span><code><span class="nx">ffmpeg</span><span class="w"> </span><span class="o">-</span><span class="nx">ss</span><span class="w"> </span><span class="mo">00</span><span class="o">:</span><span class="mo">04</span><span class="o">:</span><span class="mo">00</span><span class="mf">.000</span><span class="w"> </span><span class="o">-</span><span class="nx">i</span><span class="w"> </span><span class="s2">&quot;input.mkv&quot;</span><span class="w"> </span><span class="o">-</span><span class="nx">vf</span><span class="w"> </span><span class="s2">&quot;fps=1/60, scale=&#39;max(sar,1)*iw&#39;:&#39;max(1/sar,1)*ih&#39;:in_h_chr_pos=0:in_v_chr_pos=128:in_color_matrix=bt709:flags=full_chroma_int+full_chroma_inp+accurate_rnd+spline&quot;</span><span class="w"> </span><span class="o">-</span><span class="nx">pix_fmt</span><span class="w"> </span><span class="nx">rgb24</span><span class="w"> </span><span class="o">-</span><span class="nx">vframes</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="nx">screenshot</span><span class="o">%</span><span class="mo">02</span><span class="nx">d</span><span class="p">.</span><span class="nx">png</span><span class="w"></span>
 </code></pre></div>
 </div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nx">ffmpeg</span><span class="w"> </span><span class="o">-</span><span class="nx">ss</span><span class="w"> </span><span class="mo">00</span><span class="o">:</span><span class="mo">05</span><span class="o">:</span><span class="mo">00</span><span class="mf">.000</span><span class="w"> </span><span class="o">-</span><span class="nx">i</span><span class="w"> </span><span class="s2">&quot;input.mkv&quot;</span><span class="w"> </span><span class="o">-</span><span class="nx">vf</span><span class="w"> </span><span class="nx">scale</span><span class="o">=</span><span class="nx">in_h_chr_pos</span><span class="o">=</span><span class="mf">0</span><span class="o">:</span><span class="nx">in_v_chr_pos</span><span class="o">=</span><span class="mf">128</span><span class="o">:</span><span class="nx">in_color_matrix</span><span class="o">=</span><span class="nx">bt709</span><span class="o">:</span><span class="nx">flags</span><span class="o">=</span><span class="nx">full_chroma_int</span><span class="o">+</span><span class="nx">full_chroma_inp</span><span class="o">+</span><span class="nx">accurate_rnd</span><span class="o">+</span><span class="nx">spline</span><span class="w"> </span><span class="o">-</span><span class="nx">pix_fmt</span><span class="w"> </span><span class="nx">rgb24</span><span class="w"> </span><span class="o">-</span><span class="nx">vframes</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="nx">screenshot1</span><span class="p">.</span><span class="nx">png</span><span class="w"></span>
+</code></pre></div>
 </div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nx">ffmpeg</span><span class="w"> </span><span class="o">-</span><span class="nx">ss</span><span class="w"> </span><span class="mo">00</span><span class="o">:</span><span class="mo">04</span><span class="o">:</span><span class="mo">00</span><span class="mf">.000</span><span class="w"> </span><span class="o">-</span><span class="nx">i</span><span class="w"> </span><span class="s2">&quot;input.mkv&quot;</span><span class="w"> </span><span class="o">-</span><span class="nx">vf</span><span class="w"> </span><span class="s2">&quot;fps=1/60, scale=in_h_chr_pos=0:in_v_chr_pos=128:in_color_matrix=bt709:flags=full_chroma_int+full_chroma_inp+accurate_rnd+spline&quot;</span><span class="w"> </span><span class="o">-</span><span class="nx">pix_fmt</span><span class="w"> </span><span class="nx">rgb24</span><span class="w"> </span><span class="o">-</span><span class="nx">vframes</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="nx">screenshot</span><span class="o">%</span><span class="mo">02</span><span class="nx">d</span><span class="p">.</span><span class="nx">png</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition error">
+<p>The default commands contain <code>'max(sar,1)*iw':'max(1/sar,1)*ih'</code> just in case your file is <a href="../../anamorphic/">anamorphic</a>. The non-anamorphic commands have also been provided separately, but there is no harm in using the default command for everything. If the file is not anamorphic, that argument just won't do anything.</p>
 </div>
 <p><strong>BT.601 video:</strong></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> Single screenshot</label><label for="__tabbed_2_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> Multiple screenshots</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 19v-3h8v3h-8m-4.5-6L2.47 7h4.24l4.96 4.95c.58.59.58 1.55 0 2.12L6.74 19H2.5l6-6Z"/></svg></span> Single screenshot</label><label for="__tabbed_3_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 19v-3h8v3h-8m-4.5-6L2.47 7h4.24l4.96 4.95c.58.59.58 1.55 0 2.12L6.74 19H2.5l6-6Z"/></svg></span> Multiple screenshots</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nx">ffmpeg</span><span class="w"> </span><span class="o">-</span><span class="nx">ss</span><span class="w"> </span><span class="mo">00</span><span class="o">:</span><span class="mo">05</span><span class="o">:</span><span class="mo">00</span><span class="mf">.000</span><span class="w"> </span><span class="o">-</span><span class="nx">i</span><span class="w"> </span><span class="s2">&quot;input.mkv&quot;</span><span class="w"> </span><span class="o">-</span><span class="nx">vf</span><span class="w"> </span><span class="nx">scale</span><span class="o">=</span><span class="s1">&#39;max(sar,1)*iw&#39;</span><span class="o">:</span><span class="s1">&#39;max(1/sar,1)*ih&#39;</span><span class="o">:</span><span class="nx">in_h_chr_pos</span><span class="o">=</span><span class="mf">0</span><span class="o">:</span><span class="nx">in_v_chr_pos</span><span class="o">=</span><span class="mf">128</span><span class="o">:</span><span class="nx">in_color_matrix</span><span class="o">=</span><span class="nx">bt601</span><span class="o">:</span><span class="nx">flags</span><span class="o">=</span><span class="nx">full_chroma_int</span><span class="o">+</span><span class="nx">full_chroma_inp</span><span class="o">+</span><span class="nx">accurate_rnd</span><span class="o">+</span><span class="nx">spline</span><span class="w"> </span><span class="o">-</span><span class="nx">pix_fmt</span><span class="w"> </span><span class="nx">rgb24</span><span class="w"> </span><span class="o">-</span><span class="nx">vframes</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="nx">screenshot1</span><span class="p">.</span><span class="nx">png</span><span class="w"></span>
@@ -1063,8 +1170,11 @@ screenshot-template<span class="s">=&quot;%F-%p&quot;</span><span class="w"></sp
 </div>
 </div>
 </div>
+<div class="admonition error">
+<p>The commands contain <code>'max(sar,1)*iw':'max(1/sar,1)*ih'</code> because most BT.601 files are <a href="../../anamorphic/">anamorphic</a>.</p>
+</div>
 <p><strong>BT.2020 video:</strong></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> Single screenshot</label><label for="__tabbed_3_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> Multiple screenshots</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 19v-3h8v3h-8m-4.5-6L2.47 7h4.24l4.96 4.95c.58.59.58 1.55 0 2.12L6.74 19H2.5l6-6Z"/></svg></span> Single screenshot</label><label for="__tabbed_4_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 19v-3h8v3h-8m-4.5-6L2.47 7h4.24l4.96 4.95c.58.59.58 1.55 0 2.12L6.74 19H2.5l6-6Z"/></svg></span> Multiple screenshots</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nx">ffmpeg</span><span class="w"> </span><span class="o">-</span><span class="nx">ss</span><span class="w"> </span><span class="mo">00</span><span class="o">:</span><span class="mo">05</span><span class="o">:</span><span class="mo">00</span><span class="mf">.000</span><span class="w"> </span><span class="o">-</span><span class="nx">i</span><span class="w"> </span><span class="s2">&quot;input.mkv&quot;</span><span class="w"> </span><span class="o">-</span><span class="nx">vf</span><span class="w"> </span><span class="nx">scale</span><span class="o">=</span><span class="nx">in_h_chr_pos</span><span class="o">=</span><span class="mf">0</span><span class="o">:</span><span class="nx">in_v_chr_pos</span><span class="o">=</span><span class="mf">0</span><span class="o">:</span><span class="nx">in_color_matrix</span><span class="o">=</span><span class="nx">bt2020</span><span class="o">:</span><span class="nx">flags</span><span class="o">=</span><span class="nx">full_chroma_int</span><span class="o">+</span><span class="nx">full_chroma_inp</span><span class="o">+</span><span class="nx">accurate_rnd</span><span class="o">+</span><span class="nx">spline</span><span class="w"> </span><span class="o">-</span><span class="nx">pix_fmt</span><span class="w"> </span><span class="nx">rgb24</span><span class="w"> </span><span class="o">-</span><span class="nx">vframes</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="nx">screenshot1</span><span class="p">.</span><span class="nx">png</span><span class="w"></span>
@@ -1091,11 +1201,11 @@ screenshot-template<span class="s">=&quot;%F-%p&quot;</span><span class="w"></sp
 </li>
 </ul>
 <details class="example">
-<summary>Details of all the parameters:</summary>
+<summary>Details of all the arguments:</summary>
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
+<th>Argument</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1154,11 +1264,11 @@ screenshot-template<span class="s">=&quot;%F-%p&quot;</span><span class="w"></sp
 </tr>
 <tr>
 <td><code>screenshot%02d.png</code></td>
-<td>Filename in the format screenshot01.png, screenshot02.png.</td>
+<td>Filenames in the format screenshot01.png, screenshot02.png.</td>
 </tr>
 <tr>
 <td><code>image%03d.png</code></td>
-<td>Filename in the format image001.png, image002.png.</td>
+<td>Filenames in the format image001.png, image002.png.</td>
 </tr>
 </tbody>
 </table>
@@ -1189,7 +1299,7 @@ ConvertToRGB(matrix=&quot;Rec2020&quot;, ChromaInPlacement=&quot;top_left&quot;)
 <p>Replace <code>LWLibavVideoSource</code> with <code>FFVideoSource</code> if you are using ffms2. And so on for the other decoders.</p>
 <details class="info">
 <summary>For anamorphic files:</summary>
-<p>For <a href="../anamorphic/"><strong>anamorphic files</strong></a>, add the following line after importing the file. This will resize the video from the storage resolution to the display resolution.
+<p>For <a href="../../anamorphic/"><strong>anamorphic files</strong></a>, add the following line after importing the file. This will resize the video from the storage resolution to the display resolution.
 <div class="highlight"><pre><span></span><code>z_ConvertFormat( \
     FFSAR_NUM &gt; FFSAR_DEN ? Int(RoundHalfToEven_mod2(Float(Width)  * FFSAR_NUM / FFSAR_DEN)) : Width, \
     FFSAR_NUM &lt; FFSAR_DEN ? Int(RoundHalfToEven_mod2(Float(Height) * FFSAR_DEN / FFSAR_NUM)) : Height, \
@@ -1224,14 +1334,14 @@ Replace <code>width</code> and <code>height</code> with the proper dimensions. E
 </code></pre></div>
 <details class="info">
 <summary>For anamorphic files:</summary>
-<p>For <a href="../anamorphic/"><strong>anamorphic files</strong></a>, define the following function in your script to resize the video from the storage resolution to the display resolution.</p>
+<p>For <a href="../../anamorphic/"><strong>anamorphic files</strong></a>, define the following function in your script to resize the video from the storage resolution to the display resolution.</p>
 <details class="quote">
 <summary>resizeDAR function</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resizeDAR</span><span class="p">(</span><span class="n">clip</span><span class="p">:</span> <span class="n">vs</span><span class="o">.</span><span class="n">VideoNode</span><span class="p">,</span> <span class="n">oddRes</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">vs</span><span class="o">.</span><span class="n">VideoNode</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resizeDAR</span><span class="p">(</span><span class="n">clip</span><span class="p">:</span> <span class="n">vs</span><span class="o">.</span><span class="n">VideoNode</span><span class="p">,</span> <span class="n">exactRes</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">vs</span><span class="o">.</span><span class="n">VideoNode</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    * Odd dimensions will be rounded to the nearest even number by default (Banker&#39;s rounding).</span>
-<span class="sd">    * If you want the unrounded dimensions, set oddRes to True.</span>
-<span class="sd">      But oddRes True will give an RGB output (as long as at least one of the calculated dimensions is actually odd),</span>
+<span class="sd">    * If you want the unrounded dimensions, set exactRes to True.</span>
+<span class="sd">      But exactRes True will give an RGB output (as long as at least one of the calculated dimensions is actually odd),</span>
 <span class="sd">      so call the function at the very end of the script if going that route.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -1245,7 +1355,7 @@ Replace <code>width</code> and <code>height</code> with the proper dimensions. E
         <span class="k">return</span> <span class="n">clip</span>                <span class="c1"># No modification if the clip isn&#39;t anamorphic</span>
     <span class="k">elif</span> <span class="n">ffsar_num</span> <span class="o">&gt;</span> <span class="n">ffsar_den</span><span class="p">:</span>
         <span class="n">outwidth_precise</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">clip</span><span class="o">.</span><span class="n">width</span><span class="p">)</span> <span class="o">*</span> <span class="n">ffsar_num</span> <span class="o">/</span> <span class="n">ffsar_den</span>
-        <span class="k">if</span> <span class="n">oddRes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">exactRes</span><span class="p">:</span>
             <span class="n">outwidth</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">outwidth_precise</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">outwidth</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">outwidth_precise</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
@@ -1253,12 +1363,12 @@ Replace <code>width</code> and <code>height</code> with the proper dimensions. E
     <span class="k">else</span><span class="p">:</span>
         <span class="n">outwidth</span> <span class="o">=</span> <span class="n">clip</span><span class="o">.</span><span class="n">width</span>
         <span class="n">outheight_precise</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">clip</span><span class="o">.</span><span class="n">height</span><span class="p">)</span> <span class="o">*</span> <span class="n">ffsar_den</span> <span class="o">/</span> <span class="n">ffsar_num</span>
-        <span class="k">if</span> <span class="n">oddRes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">exactRes</span><span class="p">:</span>
             <span class="n">outheight</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">outheight_precise</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">outheight</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">outheight_precise</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
 
-    <span class="k">if</span> <span class="n">oddRes</span> <span class="ow">and</span> <span class="p">(</span><span class="n">outwidth</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">outheight</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>  <span class="c1"># Check if at least one of the dimensions is actually odd</span>
+    <span class="k">if</span> <span class="n">exactRes</span> <span class="ow">and</span> <span class="p">(</span><span class="n">outwidth</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">outheight</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>  <span class="c1"># Check if at least one of the dimensions is actually odd</span>
         <span class="k">return</span> <span class="n">core</span><span class="o">.</span><span class="n">resize</span><span class="o">.</span><span class="n">Spline36</span><span class="p">(</span><span class="n">clip</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">outwidth</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">outheight</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">vs</span><span class="o">.</span><span class="n">RGB24</span><span class="p">,</span> <span class="n">dither_type</span><span class="o">=</span><span class="s1">&#39;error_diffusion&#39;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">core</span><span class="o">.</span><span class="n">resize</span><span class="o">.</span><span class="n">Spline36</span><span class="p">(</span><span class="n">clip</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">outwidth</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">outheight</span><span class="p">,</span> <span class="n">dither_type</span><span class="o">=</span><span class="s1">&#39;error_diffusion&#39;</span><span class="p">)</span>
@@ -1268,7 +1378,7 @@ Replace <code>width</code> and <code>height</code> with the proper dimensions. E
 <ul>
 <li>Resize any clip to display resolution by using <code>src = resizeDAR(src)</code>. Odd dimensions will be rounded to the nearest even number.</li>
 <li>
-<p>If you do not want odd dimensions to be rounded, use <code>src = resizeDAR(src, oddRes=1)</code>.</p>
+<p>If you do not want odd dimensions to be rounded, use <code>src = resizeDAR(src, exactRes=1)</code>.</p>
 <p>But beware that this gives an RGB24 output instead of YUV (as long as at least one of the dimensions is actually odd). So you will want to call this function at the end of your script, <strong>after</strong> the <code>SetFrameProp</code> line in the initial script that sets the color matrix.</p>
 </li>
 </ul>
@@ -1308,7 +1418,7 @@ Replace <code>XXX</code> and <code>YYY</code> with the proper dimensions. Each d
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../anamorphic/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Anamorphic Files" rel="prev">
+        <a href="../guidelines/" class="md-footer__link md-footer__link--prev" aria-label="Previous: General Guidelines" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1317,7 +1427,7 @@ Replace <code>XXX</code> and <code>YYY</code> with the proper dimensions. Each d
               <span class="md-footer__direction">
                 Previous
               </span>
-              Anamorphic Files
+              General Guidelines
             </div>
           </div>
         </a>
