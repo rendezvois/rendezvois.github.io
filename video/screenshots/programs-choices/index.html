@@ -410,16 +410,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vlc-media-player" class="md-nav__link">
-    VLC Media Player
+  <a href="#mpc-hc" class="md-nav__link">
+    MPC-HC
   </a>
   
-    <nav class="md-nav" aria-label="VLC Media Player">
+    <nav class="md-nav" aria-label="MPC-HC">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setting-up-vlc" class="md-nav__link">
-    Setting up VLC:
+  <a href="#setting-up-mpc-hc" class="md-nav__link">
+    Setting up MPC-HC:
   </a>
   
 </li>
@@ -437,16 +437,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mpc-hc" class="md-nav__link">
-    MPC-HC
+  <a href="#vlc-media-player" class="md-nav__link">
+    VLC Media Player
   </a>
   
-    <nav class="md-nav" aria-label="MPC-HC">
+    <nav class="md-nav" aria-label="VLC Media Player">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setting-up-mpc-hc" class="md-nav__link">
-    Setting up MPC-HC:
+  <a href="#setting-up-vlc" class="md-nav__link">
+    Setting up VLC:
   </a>
   
 </li>
@@ -702,16 +702,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vlc-media-player" class="md-nav__link">
-    VLC Media Player
+  <a href="#mpc-hc" class="md-nav__link">
+    MPC-HC
   </a>
   
-    <nav class="md-nav" aria-label="VLC Media Player">
+    <nav class="md-nav" aria-label="MPC-HC">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setting-up-vlc" class="md-nav__link">
-    Setting up VLC:
+  <a href="#setting-up-mpc-hc" class="md-nav__link">
+    Setting up MPC-HC:
   </a>
   
 </li>
@@ -729,16 +729,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mpc-hc" class="md-nav__link">
-    MPC-HC
+  <a href="#vlc-media-player" class="md-nav__link">
+    VLC Media Player
   </a>
   
-    <nav class="md-nav" aria-label="MPC-HC">
+    <nav class="md-nav" aria-label="VLC Media Player">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setting-up-mpc-hc" class="md-nav__link">
-    Setting up MPC-HC:
+  <a href="#setting-up-vlc" class="md-nav__link">
+    Setting up VLC:
   </a>
   
 </li>
@@ -916,6 +916,34 @@ screenshot-template<span class="s">=&quot;%F-%p&quot;</span><span class="w"></sp
 <li><strong>mpv.net</strong> does not appear to support <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-s">S</kbd></span>, so remember to turn off the subtitles before pressing lowercase s.</li>
 </ul>
 <hr />
+<h3 id="mpc-hc"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>MPC-HC</strong><a class="headerlink" href="#mpc-hc" title="Permanent link">#</a></h3>
+<p><a class="md-button" href="https://github.com/clsid2/mpc-hc/releases"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 8v8H5V8h10m1-2H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4V7a1 1 0 0 0-1-1Z"/></svg></span> Official Webpage</a></p>
+<div class="admonition info">
+<p class="admonition-title">Do <strong>NOT</strong> download from <a href="https://mpc-hc.org/">mpc-hc.org</a>. That is an old build which is no longer updated.</p>
+</div>
+<h4 id="setting-up-mpc-hc">Setting up MPC-HC:<a class="headerlink" href="#setting-up-mpc-hc" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>Two main video renderer options:</strong> <code>Enhanced Video Renderer (custom presenter)</code> and <a href="http://madvr.com/">madVR</a>. EVR (custom presenter) is what MPC-HC comes with by default, while madVR can be optionally installed for better quality.</li>
+<li>To change the setting for the video renderer, press O or go to the Menu bar &gt; <code>View</code> &gt; <code>Options</code>. Then click on <code>Output</code> in the sidebar. The renderer options will be in a dropdown under <code>DirectShow Video</code>. See <a href="../../../images/video/screenshots/mpchc-renderer.png">this screenshot</a> for help.</li>
+<li>You need to restart MPC-HC if you switch the renderer.</li>
+<li>EVR (custom presenter) does not need any special setup.</li>
+<li><strong>For madVR:</strong><ul>
+<li>Open any video and pause it, then right click on the video, select <code>Filters</code> &gt; <code>madVR</code>. Then click on <code>Edit Settings</code>.</li>
+<li>In the madVR settings window, go to <code>rendering</code> &gt; <code>screenshots</code>, select the checkbox for <code>create screenshots with a custom zoom factor</code>, and then select the <code>encoded video size</code> option.</li>
+<li>Also ensure that the <code>don't draw subtitles</code> and <code>don't draw OSD</code> boxes are checked.</li>
+<li><strong>Visual Animated Guide:</strong> <a href="../../../images/video/screenshots/madvr-settings.gif">Click here</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="taking-the-screenshots_1">Taking the screenshots:<a class="headerlink" href="#taking-the-screenshots_1" title="Permanent link">#</a></h4>
+<ul>
+<li>Open the video by either pressing <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-q">Q</kbd></span>, or by going to the Menu bar &gt; <code>File</code> &gt; <code>Quick Open File</code>, or by simply dragging and dropping the file inside the player window.</li>
+<li>Find a suitable spot in the video of which you want to take a screenshot.</li>
+<li>To take the screenshot, press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-i">I</kbd></span> or go to the Menu bar &gt; <code>File</code> &gt; <code>Save Image</code>.</li>
+<li>If you are using EVR (custom presenter), you must uncheck the <code>Include Subtitles</code> box when saving the image. When using madVR, that box does not appear at all.</li>
+<li><strong>Visual Animated Guide:</strong> <a href="../../../images/video/screenshots/mpchc-save.gif">Click here</a></li>
+</ul>
+<hr />
 <h3 id="vlc-media-player"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>VLC Media Player</strong><a class="headerlink" href="#vlc-media-player" title="Permanent link">#</a></h3>
 <p><a class="md-button" href="https://www.videolan.org/vlc/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1c-.42 0-.81.23-1 .75L9.88 4.88c.48.52 1.4.62 2.12.62.72 0 1.64-.1 2.13-.62L13 1.75c-.18-.5-.58-.75-1-.75M8.44 8.91l-1.44 4c1.07 1.36 3.26 1.59 5 1.59 1.74 0 3.93-.23 5-1.59l-1.44-4C14.76 9.83 13.24 10 12 10c-1.24 0-2.76-.17-3.56-1.09m-3 6.09c-.82 0-1.68.65-1.91 1.44l-1.47 5.12c-.22.79.24 1.44 1.07 1.44h17.75c.82 0 1.28-.65 1.06-1.44l-1.47-5.12c-.23-.79-1.09-1.44-1.91-1.44h-.81l.34.97c.12.32.2.72 0 1C16.84 18.7 14.14 19 12 19c-2.14 0-4.84-.3-6.09-2.03-.2-.28-.12-.68 0-1l.34-.97h-.81Z"/></svg></span> Official Webpage</a> <a class="md-button" href="https://download.videolan.org/pub/videolan/vlc/2.1.5/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1c-.42 0-.81.23-1 .75L9.88 4.88c.48.52 1.4.62 2.12.62.72 0 1.64-.1 2.13-.62L13 1.75c-.18-.5-.58-.75-1-.75M8.44 8.91l-1.44 4c1.07 1.36 3.26 1.59 5 1.59 1.74 0 3.93-.23 5-1.59l-1.44-4C14.76 9.83 13.24 10 12 10c-1.24 0-2.76-.17-3.56-1.09m-3 6.09c-.82 0-1.68.65-1.91 1.44l-1.47 5.12c-.22.79.24 1.44 1.07 1.44h17.75c.82 0 1.28-.65 1.06-1.44l-1.47-5.12c-.23-.79-1.09-1.44-1.91-1.44h-.81l.34.97c.12.32.2.72 0 1C16.84 18.7 14.14 19 12 19c-2.14 0-4.84-.3-6.09-2.03-.2-.28-.12-.68 0-1l.34-.97h-.81Z"/></svg></span> Version 2.1.5</a></p>
 <div class="admonition info">
@@ -933,7 +961,7 @@ screenshot-template<span class="s">=&quot;%F-%p&quot;</span><span class="w"></sp
 <li>On the same <code>Video</code> tab, it is also recommended to set <code>Deinterlacing</code> to Off.</li>
 <li>Make a note of the folder the <code>Directory</code> option is set at, or change it if you wish. This is where VLC will save the screenshots.</li>
 </ul>
-<h4 id="taking-the-screenshots_1">Taking the screenshots:<a class="headerlink" href="#taking-the-screenshots_1" title="Permanent link">#</a></h4>
+<h4 id="taking-the-screenshots_2">Taking the screenshots:<a class="headerlink" href="#taking-the-screenshots_2" title="Permanent link">#</a></h4>
 <ul>
 <li>Open the video by either pressing <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span>, or by going to the Menu bar &gt; <code>Media</code> &gt; <code>Open File</code>, or by simply dragging and dropping the file inside the player window.<ul>
 <li>VLC also works well for streaming a file from your seedbox/server with http(s).</li>
@@ -954,36 +982,9 @@ screenshot-template<span class="s">=&quot;%F-%p&quot;</span><span class="w"></sp
 <p>See <a href="../../../images/video/screenshots/vlc215-discrepancy.png" title="ifo-vob-discrepancy">this screenshot</a> for an example. Properly authored DVDs should have the <strong>same value</strong> for <code>Aspect ratio</code> in both the IFO and the VOB.</p>
 <p>VLC 2.1.5 is usually able to play such DVDs properly.</p>
 <p>You do not need to install this old version on your system. You can just download the portable version from the <code>Version 2.1.5</code> link given at the top. Download the <strong>7z</strong> or <strong>zip</strong> file instead of the exe.</p>
-<p><strong>Important:</strong> You must load the DVD in VLC 2.1.5 <strong>as a disc</strong> for it to work properly. Opening the VOB file directly will once again give you bad aspect ratio screenshots. To load the folder as a disc, press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-d">D</kbd></span> or go to the Menu bar &gt; <code>Media</code> &gt; <code>Open Disc</code>. See <a href="../../../images/video/screenshots/vlc-open-disc.png" title="VLC Open Disc">this screenshot</a> for help.</p>
+<p><strong>Important:</strong> You must load the DVD in VLC 2.1.5 <strong>as a disc</strong> for it to work properly. Opening the VOB file directly will once again give you bad aspect ratio screenshots. Do not use the <code>Open Folder</code> option either.</p>
+<p>To load it as a disc, press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-d">D</kbd></span> or go to the Menu bar &gt; <code>Media</code> &gt; <code>Open Disc</code>. See <a href="../../../images/video/screenshots/vlc-open-disc.png" title="VLC Open Disc">this screenshot</a> for help.</p>
 </details>
-<hr />
-<h3 id="mpc-hc"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>MPC-HC</strong><a class="headerlink" href="#mpc-hc" title="Permanent link">#</a></h3>
-<p><a class="md-button" href="https://github.com/clsid2/mpc-hc/releases"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 8v8H5V8h10m1-2H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4V7a1 1 0 0 0-1-1Z"/></svg></span> Official Webpage</a></p>
-<div class="admonition info">
-<p class="admonition-title">Do <strong>NOT</strong> download from <a href="https://mpc-hc.org/">mpc-hc.org</a>. That is an old build which is no longer updated.</p>
-</div>
-<h4 id="setting-up-mpc-hc">Setting up MPC-HC:<a class="headerlink" href="#setting-up-mpc-hc" title="Permanent link">#</a></h4>
-<ul>
-<li><strong>Two main video renderer options:</strong> <code>Enhanced Video Renderer (custom presenter)</code> and <a href="http://madvr.com/">madVR</a>. EVR (custom presenter) is what MPC-HC comes with by default, while madVR can be optionally installed for better quality.</li>
-<li>To change the setting for the video renderer, press O or go to the Menu bar &gt; <code>View</code> &gt; <code>Options</code>. Then click on <code>Output</code> in the sidebar. The renderer options will be in a dropdown under <code>DirectShow Video</code>. See <a href="../../../images/video/screenshots/mpchc-renderer.png">this screenshot</a> for help.</li>
-<li>You need to restart MPC-HC if you switch the renderer.</li>
-<li>EVR (custom presenter) does not need any special setup.</li>
-<li><strong>For madVR:</strong><ul>
-<li>Open any video and pause it, then right click on the video, select <code>Filters</code> &gt; <code>madVR</code>. Then click on <code>Edit Settings</code>.</li>
-<li>In the madVR settings window, go to <code>rendering</code> &gt; <code>screenshots</code>, select the checkbox for <code>create screenshots with a custom zoom factor</code>, and then select the <code>encoded video size</code> option.</li>
-<li>Also ensure that the <code>don't draw subtitles</code> and <code>don't draw OSD</code> boxes are checked.</li>
-<li><strong>Visual Animated Guide:</strong> <a href="../../../images/video/screenshots/madvr-settings.gif">Click here</a></li>
-</ul>
-</li>
-</ul>
-<h4 id="taking-the-screenshots_2">Taking the screenshots:<a class="headerlink" href="#taking-the-screenshots_2" title="Permanent link">#</a></h4>
-<ul>
-<li>Open the video by either pressing <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-q">Q</kbd></span>, or by going to the Menu bar &gt; <code>File</code> &gt; <code>Quick Open File</code>, or by simply dragging and dropping the file inside the player window.</li>
-<li>Find a suitable spot in the video of which you want to take a screenshot.</li>
-<li>To take the screenshot, press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-i">I</kbd></span> or go to the Menu bar &gt; <code>File</code> &gt; <code>Save Image</code>.</li>
-<li>If you are using EVR (custom presenter), you must uncheck the <code>Include Subtitles</code> box when saving the image. When using madVR, that box does not appear at all.</li>
-<li><strong>Visual Animated Guide:</strong> <a href="../../../images/video/screenshots/mpchc-save.gif">Click here</a></li>
-</ul>
 <hr />
 <h3 id="color-matrix"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>Color Matrix</strong><a class="headerlink" href="#color-matrix" title="Permanent link">#</a></h3>
 <p>Before we can go into the more advanced tools like FFmpeg, AviSynth+ and Vapoursynth, here is a brief classification of the three main video color matrices:</p>
