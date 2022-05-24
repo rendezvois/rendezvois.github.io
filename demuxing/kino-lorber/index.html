@@ -191,7 +191,7 @@
   
     <li class="md-tabs__item">
       <a href="./" class="md-tabs__link md-tabs__link--active">
-        Demuxing
+        (De)muxing
       </a>
     </li>
   
@@ -212,7 +212,7 @@
   
     <li class="md-tabs__item">
       <a href="../../miscellaneous/naming-conventions/overview/" class="md-tabs__link">
-        Other
+        Miscellaneous
       </a>
     </li>
   
@@ -401,14 +401,14 @@
       
       
         <label class="md-nav__link" for="__nav_3">
-          Demuxing
+          (De)muxing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Demuxing" data-md-level="1">
+      <nav class="md-nav" aria-label="(De)muxing" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Demuxing
+          (De)muxing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -538,14 +538,14 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          Other
+          Miscellaneous
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Other" data-md-level="1">
+      <nav class="md-nav" aria-label="Miscellaneous" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Other
+          Miscellaneous
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -597,6 +597,20 @@
     <li class="md-nav__item">
       <a href="../../miscellaneous/naming-conventions/encodes/" class="md-nav__link">
         Encodes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../miscellaneous/naming-conventions/remuxes/" class="md-nav__link">
+        Remuxes
       </a>
     </li>
   
@@ -711,7 +725,7 @@
                 
 
 
-<h1 id="how-to-demux-kino-lorber-blu-ray-discs-properly"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.27 6.73-4.24 10.13-1.32-3.42-.32-.83-.82-.32-3.43-1.33 10.13-4.23M21 3 3 10.53v.97l6.84 2.66L12.5 21h.96L21 3Z"/></svg></span> <strong>How to demux Kino Lorber Blu-ray Discs properly</strong><a class="headerlink" href="#how-to-demux-kino-lorber-blu-ray-discs-properly" title="Permanent link">#</a></h1>
+<h1 id="how-to-demux-kino-lorber-blu-ray-discs-properly"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 21v-2H6.41l4.5-4.5-1.41-1.41-4.5 4.5V14H3v7h7m4.5-10.09 4.5-4.5V10h2V3h-7v2h3.59l-4.5 4.5 1.41 1.41Z"/></svg></span> <strong>How to demux Kino Lorber Blu-ray Discs properly</strong><a class="headerlink" href="#how-to-demux-kino-lorber-blu-ray-discs-properly" title="Permanent link">#</a></h1>
 <hr />
 <h3 id="introduction-to-the-problem"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>Introduction to the problem:</strong><a class="headerlink" href="#introduction-to-the-problem" title="Permanent link">#</a></h3>
 <p>Most Kino Lorber blu-ray discs need a special technique to demux the streams properly.</p>
@@ -719,12 +733,14 @@
 <p>Due to this, when you demux these discs, the audio of the main movie gets shifted earlier to the start of the intro. The same thing happens to the subtitles. The result is that you end up with a file which is now out of sync with both the audio and the subtitles.</p>
 <hr />
 <h3 id="how-to-identify-if-the-disc-needs-special-demuxing"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>How to identify if the disc needs special demuxing:</strong><a class="headerlink" href="#how-to-identify-if-the-disc-needs-special-demuxing" title="Permanent link">#</a></h3>
-<p>Not every Kino Lorber disc is authored in this way. Some do not have the intro. For instance, their "Kino Classics" line of releases are generally not authored in this way (or perhaps never).</p>
+<p>Not every Kino Lorber disc is authored in this way. Some do not have the intro.</p>
+<p>For instance, their "Kino Classics" line of releases are generally not authored in this way (or perhaps never). They do have an intro, but not as a separate file, and thus, do not need any special handling.</p>
 <div class="admonition info">
-<p class="admonition-title">You need the special demux technique only if the disc has this 11 second intro before the movie.</p>
+<p class="admonition-title">You need the special demux technique only if the disc has this 11 second intro as a separate file before the movie.</p>
 </div>
 <p>The length of the intro is always 264 frames, which at 23.976 FPS (or 24000/1001 FPS) is 11011ms.</p>
-<p>Use <a href="https://www.videohelp.com/software/BDInfo">BDInfo</a>, <a href="https://www.videohelp.com/software/eac3to">eac3to</a> or <a href="https://mediaarea.net/en/MediaInfo">mediainfo</a> to see the contents of the main playlist on the disc.</p>
+<div class="admonition example">
+<p class="admonition-title">Use <a href="https://www.videohelp.com/software/BDInfo">BDInfo</a>, <a href="https://www.videohelp.com/software/eac3to">eac3to</a> or <a href="https://mediaarea.net/en/MediaInfo">mediainfo</a> to see the contents of the main playlist on the disc.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> BDInfo Program</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> BDInfo Scan Output</label><label for="__tabbed_1_3"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> eac3to</label><label for="__tabbed_1_4"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6v13h16V6H4Z"/></svg></span> mediainfo</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -732,9 +748,9 @@
 <p><img alt="kinolorber-bdinfo-gui" src="../../images/demuxing/kinolorber-bdinfo-gui.png" title="Kino Lorber BDInfo GUI" /></p>
 </div>
 <div class="tabbed-block">
-<p>Same thing can be done with the <strong>FULL</strong> (unabridged) BDInfo text output. This output is produced by both the regular BDInfo program and the CLI versions.</p>
+<p>Same thing can be done with the <strong>FULL</strong> (unabridged) BDInfo text output. This output is produced by both the regular BDInfo program and the <a href="https://github.com/zoffline/BDInfoCLI-ng">CLI version</a>.</p>
 <p>The full output contains the list of the files that the playlist is made up of. Again, look for an 11 second long file above the main movie.</p>
-<details class="example">
+<details class="quote">
 <summary>Look for the highlighted line in the below output:</summary>
 <div class="highlight"><pre><span></span><code>DISC INFO:
 
@@ -810,7 +826,7 @@ File            PID             Type            Codec           Language        
 </details>
 </div>
 <div class="tabbed-block">
-<p><strong>First scan the folder with eac3to.</strong>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15.146 12.354-5.792 5.792a.5.5 0 0 1-.854-.353V6.207a.5.5 0 0 1 .854-.353l5.792 5.792a.5.5 0 0 1 0 .708z"/></svg></span> <strong>First scan the folder with eac3to.</strong>
 <div class="highlight"><pre><span></span><code>D:\&gt;eac3to &quot;Sample Disc&quot;
 1) 00004.mpls, 00010.m2ts+00004.m2ts+00000.m2ts, 1:10:00
 - Chapters, 12 chapters
@@ -818,22 +834,23 @@ File            PID             Type            Codec           Language        
 </code></pre></div></p>
 <p>That output means the main playlist <code>00004.mpls</code> is made up of three m2ts files: 00010 + 00004 + 00000, totaling a duration of 1:10:00.</p>
 <p><code>00004.m2ts</code> in a Kino Lorber disc is almost always the main movie. Since we see a different file: <code>00010.m2ts</code> before it, it's a good indicator that it's the intro.</p>
-<p><strong>To confirm whether it's the intro, we can look up the info of <code>00010.m2ts</code> using eac3to:</strong></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15.146 12.354-5.792 5.792a.5.5 0 0 1-.854-.353V6.207a.5.5 0 0 1 .854-.353l5.792 5.792a.5.5 0 0 1 0 .708z"/></svg></span> <strong>To confirm whether it's the intro, we can look up the info of <code>00010.m2ts</code> using eac3to:</strong></p>
 <div class="highlight"><pre><span></span><code>D:\&gt;eac3to &quot;Sample Disc\BDMV\STREAM\00010.m2ts&quot;
 M2TS, 1 video track, 0:00:11, 24p /1.001
 1: h264/AVC, 1080p24 /1.001 (16:9)
 </code></pre></div>
 <p>That output confirms that the duration of <code>00010.m2ts</code> is 0:00:11, or 11 seconds.</p>
 <p>Another interesting confirmation from that output is that <code>00010.m2ts</code> has only an h264 video stream. There is no other stream, like audio or subtitle.</p>
+<hr />
 <p>Of course, you can also just play <code>00010.m2ts</code> in a media player, or take its mediainfo, to check if it is 11 seconds long. </p>
 </div>
 <div class="tabbed-block">
 <p>This is not widely known, but mediainfo can also show you the different m2ts files that a blu-ray playlist is made up of.</p>
-<p><strong>Command:</strong> <code>mediainfo ~/bdfolder/BDMV/PLAYLIST/00004.mpls &gt; output.txt</code></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 19v-3h8v3h-8m-4.5-6L2.47 7h4.24l4.96 4.95c.58.59.58 1.55 0 2.12L6.74 19H2.5l6-6Z"/></svg></span> <strong>Command:</strong> <code>mediainfo ~/bdfolder/BDMV/PLAYLIST/00004.mpls &gt; output.txt</code></p>
 <div class="admonition error">
 <p class="admonition-title">The full path of the mpls file must be used to get the proper output. <br /> Going to the PLAYLIST folder and using just the filename, like <code>mediainfo 00004.mpls</code>, produces an incomplete output.</p>
 </div>
-<details class="example">
+<details class="quote">
 <summary>Mediainfo of a Kino Lorber disc's main playlist:</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
 <span class="normal">  2</span>
@@ -1157,10 +1174,12 @@ Menu
 </code></pre></div></td></tr></table></div>
 </details>
 <p>The above output shows that the playlist <code>00004.mpls</code> consists of <code>00010.m2ts</code> of 11s11ms length + <code>00004.m2ts</code> of 1h10m length + <code>00000.m2ts</code> of 1s1ms length.</p>
-<p><strong>Sidenote:</strong> Taking <strong>advanced</strong> mediainfo using <code>mediainfo -f ~/bdfolder/BDMV/PLAYLIST/00004.mpls &gt; output.txt</code> will show you this pertinent line under the info of <code>00010.m2ts</code>:
-  <div class="highlight"><pre><span></span><code>  Frame count                              : 264
+<hr />
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15.146 12.354-5.792 5.792a.5.5 0 0 1-.854-.353V6.207a.5.5 0 0 1 .854-.353l5.792 5.792a.5.5 0 0 1 0 .708z"/></svg></span> <strong>Sidenote:</strong> Taking <strong>advanced</strong> mediainfo using <code>mediainfo -f ~/bdfolder/BDMV/PLAYLIST/00004.mpls &gt; output.txt</code> will show you this pertinent line under the info of <code>00010.m2ts</code>:
+  <div class="highlight"><pre><span></span><code>Frame count                              : 264
 </code></pre></div>
 Which reiterates the statement from earlier in this section — that the intro is 264 frames long.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1271,7 +1290,7 @@ Which reiterates the statement from earlier in this section — that the intro i
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <i>Site Last Updated&colon; 22 May 2022</i>
+      <i>Site Last Updated&colon; May 23 2022</i>
     </div>
   
   
