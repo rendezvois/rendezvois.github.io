@@ -1,3 +1,24 @@
 .md-grid {
-  max-width: 1600px; 
+  max-width: 1600px;
 }
+
+/* Animate the log on hovering */
+@keyframes md-logo {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  30%,
+  60% {
+    transform: rotate(0.5turn) scale(1.25);
+  }
+}
+
+.md-logo:hover {
+  animation: md-logo 2000ms infinite;
+  color: red;
+}
+
+/* End animate logo */
