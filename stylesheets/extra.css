@@ -18,7 +18,6 @@
 
 .md-logo:hover {
   animation: md-logo 2000ms infinite;
-  color: red;
 }
 
 /* End animate logo */

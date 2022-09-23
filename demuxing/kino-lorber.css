@@ -1,0 +1,212 @@
+/* * {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+  } */
+
+figure.graphic-box {
+  padding: 0.5rem;
+  width: 100%;
+
+  /* SEE TAB SECTION AT BOTTOM ↓↓↓ */
+  /* display: grid; */
+
+  grid-template-columns: 1fr 5fr;
+  column-gap: 0.5rem;
+  overflow: auto;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  border-radius: 10px;
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+  box-shadow: 2px 5px 15px 1px rgba(165, 164, 164, 0.3),
+    inset -1px -3px 10px 1px rgba(165, 164, 164, 0.5);
+}
+
+.graphic-box .graphic-title {
+  /* ---- Reset user-agent stylesheet settings ---- */
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  /* ---- Reset user-agent stylesheet settings ---- */
+
+  margin-bottom: 1rem;
+  padding: 0.3rem;
+  background-color: rgba(165, 164, 164, 0.1);
+  border-radius: 10px;
+  border: 1px solid #495057;
+  box-shadow: 2px 2px 0 0 rgba(43, 138, 62, 0.7);
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 10px;
+  font-family: "Roboto Slab", serif;
+
+  grid-column: 1/-1;
+}
+
+.graphic-box .row {
+  padding: 1rem;
+  margin: 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.graphic-box .row-m2ts-name {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+
+  background: linear-gradient(
+    180deg,
+    rgba(238, 220, 142, 1) 0%,
+    rgba(255, 230, 140, 1) 20%,
+    rgba(255, 238, 179, 1) 90%,
+    rgba(238, 220, 142, 1) 100%
+  );
+
+  box-shadow: 3px 2px 10px 2px rgba(180, 180, 180, 0.2);
+  border-radius: 10px;
+}
+
+.graphic-box .row-m2ts-type {
+  padding: 0;
+  margin: 1rem 0;
+
+  font-size: 0.8rem;
+  font-family: "Kalam", cursive;
+  font-weight: 600;
+
+  position: relative;
+}
+
+/* For underlining — https://stackoverflow.com/a/44120553 */
+.graphic-box .row-m2ts-type::after {
+  content: "";
+  height: 3px;
+  width: 3rem;
+  background-color: #000;
+  position: absolute;
+  bottom: -0.5rem;
+
+  left: 50%;
+  /* 50% here refers to 50% of the parent element, because of absolute/relative positioning.
+     So this leads to the underline starting from the midpoint of the parent div. */
+
+  transform: translate(-50%);
+  /* 50% here refers to 50% of the underline element's own width, i.e. 50% of 48px here.
+     So this moves the left half of underline to the left half of the parent div, thereby centering it. */
+}
+
+.graphic-box .row-video-track {
+  border-radius: 10px;
+
+  background: repeating-linear-gradient(
+    -65deg,
+    #fff,
+    #fff 14px,
+    rgba(187, 187, 187, 0.5) 10px,
+    rgba(187, 187, 187, 0.5) 15px
+  );
+
+  box-shadow: 3px 2px 10px 2px rgba(180, 180, 180, 0.2);
+}
+
+.graphic-box .row-audio-track {
+  border-radius: 10px;
+
+  background: repeating-linear-gradient(
+    -125deg,
+    #fff,
+    #fff 14px,
+    rgba(187, 187, 187, 0.5) 10px,
+    rgba(187, 187, 187, 0.5) 15px
+  );
+
+  box-shadow: 3px 2px 10px 2px rgba(180, 180, 180, 0.2);
+}
+
+.graphic-box #no-audio {
+  text-decoration: line-through;
+  text-decoration-color: #f00;
+  text-decoration-thickness: 5px;
+}
+
+.graphic-box.method-3 {
+  grid-template-columns: auto;
+}
+
+.graphic-note {
+  margin: 0 2rem;
+}
+
+/* Button source: https://getcssscan.com/css-buttons-examples */
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.buttons .button-50 {
+  appearance: button;
+  background-color: #282828;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 12px 40px;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.buttons .button-50:focus {
+  text-decoration: none;
+}
+
+.buttons .button-50:hover {
+  text-decoration: none;
+  background-color: #8cd694;
+  color: #282828;
+}
+
+.buttons .button-50:active {
+  box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.buttons .button-50:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .buttons .button-50 {
+    padding: 12px 50px;
+  }
+}
+
+/* TABS */
+
+figure.graphic-box,
+.graphic-note {
+  display: none;
+}
+
+figure.graphic-box.tab--active {
+  display: grid;
+}
+
+.graphic-note.tab--active {
+  display: block;
+}

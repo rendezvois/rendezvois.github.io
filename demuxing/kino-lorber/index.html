@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../images/nachos.svg">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
     
     
       
@@ -17,7 +17,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a952b86.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -28,6 +28,7 @@
         
       
       
+
     
     
     
@@ -42,10 +43,11 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -123,7 +125,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -512,6 +514,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#illustration-of-the-problem" class="md-nav__link">
+    Illustration of the problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#introduction-to-the-problem" class="md-nav__link">
     Introduction to the problem
   </a>
@@ -547,6 +556,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#using-dgdemux" class="md-nav__link">
+    Using DGDemux
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -555,13 +571,6 @@
         <li class="md-nav__item">
   <a href="#for-encoders" class="md-nav__link">
     For encoders
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graphic-to-summarize-the-problem" class="md-nav__link">
-    Graphic to summarize the problem
   </a>
   
 </li>
@@ -745,6 +754,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#illustration-of-the-problem" class="md-nav__link">
+    Illustration of the problem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#introduction-to-the-problem" class="md-nav__link">
     Introduction to the problem
   </a>
@@ -780,6 +796,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#using-dgdemux" class="md-nav__link">
+    Using DGDemux
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -792,13 +815,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#graphic-to-summarize-the-problem" class="md-nav__link">
-    Graphic to summarize the problem
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -807,13 +823,82 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
 <h1 id="how-to-demux-kino-lorber-blu-ray-discs-properly"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 8H3V6h18M9 13h12v-2H9m0 7h12v-2H9"/></svg></span> <strong>How to demux Kino Lorber Blu-ray Discs properly</strong><a class="headerlink" href="#how-to-demux-kino-lorber-blu-ray-discs-properly" title="Permanent link">#</a></h1>
+<hr />
+<p><link rel="stylesheet" href="../kino-lorber.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap"
+  rel="stylesheet"
+/></p>
+<script src="../kino-lorber.js" defer></script>
+
+<h3 id="illustration-of-the-problem"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>Illustration of the problem</strong><a class="headerlink" href="#illustration-of-the-problem" title="Permanent link">#</a></h3>
+<nav class="buttons">
+  <button class="button-50" role="button" data-tab="1">1. Original Structure</button>
+  <button class="button-50" role="button" data-tab="2">2. Demuxing Playlist</button>
+  <button class="button-50" role="button" data-tab="3">3. Demuxing Main m2ts</button>
+</nav>
+
+<figure class="graphic-box tab tab-1 tab--active">
+      <h3 class="graphic-title">Original Disc Structure</h3>
+      <div class="row row-m2ts-type">KL Intro (11 sec)</div>
+      <div class="row row-m2ts-type">Main Movie</div>
+      <div class="row row-m2ts-name">00010.m2ts</div>
+      <div class="row row-m2ts-name">00004.m2ts</div>
+      <div class="row row-video-track">Video 1</div>
+      <div class="row row-video-track">Video 2</div>
+      <div class="row row-audio-track" id="no-audio">No Audio</div>
+      <div class="row row-audio-track">Audio 2</div>
+</figure>
+
+<div class="graphic-note tab tab-1 tab--active">
+<div class="admonition error">
+<p class="admonition-title">This original structure plays fine in media players, but cannot be demuxed properly without a special technique.</p>
+</div>
+</div>
+<figure class="graphic-box method-2 tab tab-2">
+      <h3 class="graphic-title">Demuxing Playlist (00004.mpls)</h3>
+      <div class="row row-m2ts-type">KL Intro (11 sec)</div>
+      <div class="row row-m2ts-type">Main Movie</div>
+      <div class="row row-m2ts-name">00010.m2ts</div>
+      <div class="row row-m2ts-name">00004.m2ts</div>
+      <div class="row row-video-track">Video 1</div>
+      <div class="row row-video-track">Video 2</div>
+      <div class="row row-audio-track">Audio 2</div>
+      <div class="row row-audio-track">Audio 2</div>
+</figure>
+
+<div class="graphic-note tab tab-2">
+<div class="admonition error">
+<p class="admonition-title">Audio 2 gets shifted leftward to the 11011ms long intro, leading to out of sync audio (and subtitles). <br /> <br /> If you demuxed this way, apply a 11011ms delay to the audio and subtitles by following the steps in the earlier section called <em>"Demuxing the playlist method"</em>.</p>
+</div>
+</div>
+<figure class="graphic-box method-3 tab tab-3">
+      <h3 class="graphic-title">Demuxing Main M2ts (00004.m2ts)</h3>
+      <div class="row row-m2ts-type">Main Movie</div>
+      <div class="row row-m2ts-name">00004.m2ts</div>
+      <div class="row row-video-track">Video 2</div>
+      <div class="row row-audio-track">Audio 2</div>
+</figure>
+
+<div class="graphic-note tab tab-3">
+<div class="admonition error">
+<p class="admonition-title">Intro gets removed completely, leaving in-sync video, audio and subtitles. <br /> <br /> Just get chapters from 00004.MPLS and apply an offset of -11011ms.</p>
+</div>
+</div>
 <hr />
 <h3 id="introduction-to-the-problem"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>Introduction to the problem</strong><a class="headerlink" href="#introduction-to-the-problem" title="Permanent link">#</a></h3>
 <p>Most Kino Lorber blu-ray discs need a special technique to demux the streams properly to retain audio sync.</p>
@@ -1273,9 +1358,10 @@ This confirms the statement from earlier in this section — that the intro is 2
 </div>
 <hr />
 <h3 id="how-to-demux-properly"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>How to demux properly</strong><a class="headerlink" href="#how-to-demux-properly" title="Permanent link">#</a></h3>
-<p>There are two methods to get a properly playable file from such discs.</p>
+<p>There are three methods to get a properly playable file from such discs.</p>
 <p>The easier option is to demux <code>00004.m2ts</code> instead of the playlist. This method removes the intro completely. If you go this route, only the chapters will need to be manually adjusted.</p>
 <p>The other option is to demux the playlist as usual. This will keep the intro intact, so you need to apply a delay of <code>11011ms</code> to the audio and subtitles.</p>
+<p>The third option that uses a program called DGDemux is similar to the first option. It removes the intro too.</p>
 <ol>
 <li>
 <h4 id="demuxing-the-m2ts-method">Demuxing the m2ts method<a class="headerlink" href="#demuxing-the-m2ts-method" title="Permanent link">#</a></h4>
@@ -1295,7 +1381,7 @@ This confirms the statement from earlier in this section — that the intro is 2
 <li>
 <p><strong>Adjusting chapters:</strong> After extracting the chapters, you need to adjust their timings since the original timings are meant for the intro + movie.</p>
 <p>The same <code>Chapter editor</code> in MKVToolnix GUI can be used for this purpose. With the chapters open in there, right click on <code>Edition entry</code> and click on <code>Additional modifications</code>. Check the first field called <code>Shift start and end timestamps</code> and enter the value <code>-00:00:11.011</code> in the box.</p>
-<p><strong>Visual Animated Guide</strong> for adjusting the chapters: <a href="../../images/demuxing/kinolorber-chapters-adjust.gif">Click here</a></p>
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7c0-1.11.89-2 2-2h16M5 16h14l-4.5-6-3.5 4.5-2.5-3L5 16Z"/></svg></span> Visual Animated Guide</strong> for adjusting the chapters: <a href="../../images/demuxing/kinolorber-chapters-adjust.gif">Click here</a></p>
 </li>
 </ol>
 </li>
@@ -1313,9 +1399,43 @@ This confirms the statement from earlier in this section — that the intro is 2
 <p>Chapters do not need any adjustment if you demuxed the playlist.</p>
 <p>Alternatively, you can set a delay of 11011ms to the audio(s) and subtitle(s) in MKVToolnix when muxing the file. Of course don't apply the delay in both eac3to and MKVToolnix at the same time.</p>
 </li>
+<li>
+<h4 id="using-dgdemux">Using DGDemux<a class="headerlink" href="#using-dgdemux" title="Permanent link">#</a></h4>
+<p><a href="https://www.rationalqm.us/dgdemux/dgdemux.html">DGDemux</a> is a demuxing tool available for Windows and Linux. The Windows version also comes with a GUI.</p>
+<p>It comes with a feature to skip the intro m2ts, which is able to handle such discs easily.</p>
+<p>The option is called <code>Skip first M2TS</code> in the GUI version, and <code>-sf</code> in the command line.</p>
+<div class="admonition quote">
+<p class="admonition-title">From DGDemux's readme:</p>
+<p><code>-sf</code>: Skip the first M2TS file in the playlist. Some disks, such as Naked Alibi, have a very short first M2TS file in the playlist that is typically a logo without audio. The lack of audio causes a parsing failure upon opening the MPLS, such that the audio is not detected for the title. To process such disks, you can give the <code>-sf</code> option. The chapters will be adjusted accordingly.</p>
+</div>
+<div class="admonition bug">
+<p class="admonition-title">Subtitle bug:</p>
+<p>The latest DGDemux version at the time of writing, which is v1.0.0.62, has been found to fail at adjusting the PGS subtitles by the proper -11011ms offset even when using the option to skip the first m2ts.</p>
+<p>So the extracted SUP file will need to be delayed manually by -11011ms.</p>
+<p>eac3to can be used for this purpose: <code>eac3to input.sup output.sup -11011ms</code></p>
+<hr />
+<p>An alternative, if you have eac3to, is to extract the subtitle directly from the m2ts: <code>eac3to 00004.m2ts 4:english.sup</code></p>
+</div>
+<p><strong>Now, the feature that needs to be used:</strong></p>
+<ul>
+<li>
+<p><strong>GUI method:</strong> With 00004.m2ts selected in the Playlists section, just check the <code>Skip first M2TS</code> box.</p>
+<p><img alt="kinolorber-dgdemux" src="../../images/demuxing/kinolorber-dgdemux.png" title="DGDemuxGUI Skip first M2TS" /></p>
+</li>
+<li>
+<p><strong>CLI method:</strong> Add <code>-sf</code> to your demux command.</p>
+<div class="admonition quote">
+<p class="admonition-title">Example command:</p>
+<p><code>DGDemux.exe -i "F:\KINO BD\BDMV\PLAYLIST\00004.mpls" -sf -o "F:\demux\00004" -nopre</code></p>
+</div>
+</li>
+</ul>
+</li>
 </ol>
+<hr />
 <div class="admonition danger">
-<p class="admonition-title">Regardless of which method you used, always play the final file in a media player and check if everything is in sync.</p>
+<p class="admonition-title">Reminder</p>
+<p>"Regardless of which of the above three methods you use, always play the final file in a media player and check if everything is in sync."</p>
 </div>
 <hr />
 <h3 id="for-encoders"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>For encoders</strong><a class="headerlink" href="#for-encoders" title="Permanent link">#</a></h3>
@@ -1327,13 +1447,16 @@ This confirms the statement from earlier in this section — that the intro is 2
 <p>Remember that frames in AviSynth and VapourSynth start from 0 and not 1.</p>
 <p>To verify if you cut the intro properly, enable showing the frame info of your trimmed video using <code>MyLWLInfo()</code> / <code>LWLInfo()</code> / <code>awf.FrameInfo()</code>. If the first frame is an <strong>I-frame</strong>, the cutting was done correctly.</p>
 <hr />
-<h3 id="graphic-to-summarize-the-problem"><img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> <strong>Graphic to summarize the problem</strong><a class="headerlink" href="#graphic-to-summarize-the-problem" title="Permanent link">#</a></h3>
-<p><img alt="Kino Lorber Graphic" src="../../images/demuxing/kinolorber-graphic.png" title="Kino Lorber graphic" /></p>
 
-              
-            </article>
-            
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
@@ -1381,7 +1504,7 @@ This confirms the statement from earlier in this section — that the intro is 2
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <i>Site Last Updated&colon; June 26 2022</i>
+      <i>Site Last Updated&colon; September 23 2022</i>
     </div>
   
   
@@ -1400,10 +1523,11 @@ This confirms the statement from earlier in this section — that the intro is 2
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "search.highlight"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "search.highlight"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../assets/javascripts/bundle.37e9125f.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       

@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../../images/nachos.svg">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
     
     
       
@@ -17,7 +17,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7a952b86.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -28,6 +28,7 @@
         
       
       
+
     
     
     
@@ -42,10 +43,11 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -123,7 +125,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -865,10 +867,11 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
 <h1 id="naming-conventions-for-file-and-folder-names"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 8H3V6h18M9 13h12v-2H9m0 7h12v-2H9"/></svg></span> <strong>Naming Conventions for File and Folder Names</strong><a class="headerlink" href="#naming-conventions-for-file-and-folder-names" title="Permanent link">#</a></h1>
@@ -893,13 +896,13 @@
 </li>
 <li>
 <p>For foreign language titles, replace any accented characters with English equivalent ones.</p>
-<p>Examples: <strong>à</strong> with <strong>a</strong> | <strong>č</strong> with <strong>c</strong> | <strong>ô</strong> with <strong>o</strong> | <strong>æ</strong> with <strong>ae</strong>. Some online tools to help with this: <a href="http://www.unit-conversion.info/texttools/remove-letter-accents/">One</a> | <a href="https://codebeautify.org/remove-accents">Two</a> | <a href="https://miniwebtool.com/remove-accent/">Three</a>.</p>
-</li>
-<li>
-<p>DVDs and Blu-ray Discs often have abbreviated or incomplete labels as the folder name. These need to be changed to the proper movie title.</p>
-<p>For example, change <code>PIRATES_CARIBBEAN</code> to <code>Pirates.of.the.Caribbean.Dead.Mans.Chest</code></p>
 </li>
 </ul>
+<p>Examples: <strong>à</strong> with <strong>a</strong> | <strong>č</strong> with <strong>c</strong> | <strong>ô</strong> with <strong>o</strong> | <strong>æ</strong> with <strong>ae</strong>. Some online tools to help with this: <a href="http://www.unit-conversion.info/texttools/remove-letter-accents/">One</a> | <a href="https://codebeautify.org/remove-accents">Two</a> | <a href="https://miniwebtool.com/remove-accent/">Three</a>.</p>
+<ul>
+<li>DVDs and Blu-ray Discs often have abbreviated or incomplete labels as the folder name. These need to be changed to the proper movie title.</li>
+</ul>
+<p>For example, change <code>PIRATES_CARIBBEAN</code> to <code>Pirates.of.the.Caribbean.Dead.Mans.Chest</code></p>
 <h3 id="year"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 5.75C4 4.784 4.784 4 5.75 4h4.5c.966 0 1.75.784 1.75 1.75v4.5A1.75 1.75 0 0 1 10.25 12h-4.5A1.75 1.75 0 0 1 4 10.25v-4.5zm1.75-.25a.25.25 0 0 0-.25.25v4.5c0 .138.112.25.25.25h4.5a.25.25 0 0 0 .25-.25v-4.5a.25.25 0 0 0-.25-.25h-4.5z"/></svg></span> <strong>Year</strong><a class="headerlink" href="#year" title="Permanent link">#</a></h3>
 <p>The year mentioned on IMDb.</p>
 <p>For movie collection boxsets:</p>
@@ -908,7 +911,7 @@
 <li>Year range covering the movies in the boxset, e.g. <code>David Cronenberg's Early Works [1966-1970]</code></li>
 </ul>
 <h3 id="cut-version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 5.75C4 4.784 4.784 4 5.75 4h4.5c.966 0 1.75.784 1.75 1.75v4.5A1.75 1.75 0 0 1 10.25 12h-4.5A1.75 1.75 0 0 1 4 10.25v-4.5zm1.75-.25a.25.25 0 0 0-.25.25v4.5c0 .138.112.25.25.25h4.5a.25.25 0 0 0 .25-.25v-4.5a.25.25 0 0 0-.25-.25h-4.5z"/></svg></span> <strong>Cut / Version</strong><a class="headerlink" href="#cut-version" title="Permanent link">#</a></h3>
-<p>Any relevant cut or version name, like <code>Unrated</code>, <code>Extended.Cut</code>, <code>Directors.Cut</code>, <code>English Dub</code>, <code>IMAX Version</code></p>
+<p>Any relevant cut or version name, like <code>Unrated</code>, <code>Extended.Cut</code>, <code>Directors.Cut</code>, <code>English.Dub</code>, <code>IMAX Version</code></p>
 <p>Check IMDb's "Technical specs" and "Alternate Versions" page to find out information about different cuts of a movie.</p>
 <p>For example, Deadpool 2's <a href="https://www.imdb.com/title/tt5463162/technical">Technical specs</a> and <a href="https://www.imdb.com/title/tt5463162/alternateversions">Alternate Versions</a> pages.</p>
 <p>If IMDb does not have any relevant info, try these sources:</p>
@@ -920,12 +923,12 @@
 </ul>
 <h3 id="proper-repack-rerip"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 5.75C4 4.784 4.784 4 5.75 4h4.5c.966 0 1.75.784 1.75 1.75v4.5A1.75 1.75 0 0 1 10.25 12h-4.5A1.75 1.75 0 0 1 4 10.25v-4.5zm1.75-.25a.25.25 0 0 0-.25.25v4.5c0 .138.112.25.25.25h4.5a.25.25 0 0 0 .25-.25v-4.5a.25.25 0 0 0-.25-.25h-4.5z"/></svg></span> <strong>PROPER / REPACK / RERIP</strong><a class="headerlink" href="#proper-repack-rerip" title="Permanent link">#</a></h3>
 <ul>
-<li>
-<p><strong><code>REPACK</code></strong> is used when fixing some error in your own earlier release, like changing the audio, adding a subtitle, fixing wrongly tagged language, etc.</p>
-<div class="admonition error">
-<p>Do NOT reuse the initial filename unless it had zero snatches. It causes confusion when there are multiple files out in the wild with identical file names.</p>
-</div>
-</li>
+<li><strong><code>REPACK</code></strong> is used when fixing some error in your own earlier release, like changing the audio, adding a subtitle, fixing wrongly tagged language, etc.</li>
+</ul>
+<p>!!! error ""</p>
+<pre><code>  Do NOT reuse the initial filename unless it had zero snatches. It causes confusion when there are multiple files out in the wild with identical file names.
+</code></pre>
+<ul>
 <li>
 <p><strong><code>PROPER</code></strong> is similar to <code>REPACK</code> — generally used when replacing a release by a different user or group.</p>
 </li>
@@ -941,22 +944,18 @@
 </ul>
 <h3 id="source"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 5.75C4 4.784 4.784 4 5.75 4h4.5c.966 0 1.75.784 1.75 1.75v4.5A1.75 1.75 0 0 1 10.25 12h-4.5A1.75 1.75 0 0 1 4 10.25v-4.5zm1.75-.25a.25.25 0 0 0-.25.25v4.5c0 .138.112.25.25.25h4.5a.25.25 0 0 0 .25-.25v-4.5a.25.25 0 0 0-.25-.25h-4.5z"/></svg></span> <strong>Source</strong><a class="headerlink" href="#source" title="Permanent link">#</a></h3>
 <ul>
-<li><strong><abbr title="Standard Definition">SD</abbr> encodes:</strong> <code>DVDRip</code>, <code>NTSC.DVDRip</code>, <code>PAL.DVDRip</code>, <code>TVRip</code>, <code>VHSRip</code>, <code>WEBRip</code>, <code>LDRip</code><ul>
+<li><strong><abbr title="Standard Definition">SD</abbr> encodes:</strong> <code>DVDRip</code>, <code>NTSC.DVDRip</code>, <code>PAL.DVDRip</code>, <code>TVRip</code>, <code>VHSRip</code>, <code>WEBRip</code>, <code>LDRip</code></li>
 <li><strong><abbr title="Standard Definition">SD</abbr> Blu-ray encodes:</strong> <code>480p.BluRay</code>, <code>576p.BluRay</code></li>
-</ul>
-</li>
 <li><strong><abbr title="Standard Definition">SD</abbr> sources:</strong> <code>DVD5</code>, <code>DVD9</code>, <code>NTSC.DVD5</code>, <code>NTSC.DVD9</code>, <code>PAL.DVD5</code>, <code>PAL.DVD9</code>, <code>WEB-DL</code></li>
 <li><strong><abbr title="High Definition">HD</abbr>/<abbr title="Ultra High Definition">UHD</abbr> encodes:</strong> <code>BluRay</code>, <code>UHD.BluRay</code>, <code>WEBRip</code>, <code>HDTV</code>, <code>UHDTV</code>, <code>HD-DVD</code></li>
-<li><strong><abbr title="High Definition">HD</abbr>/<abbr title="Ultra High Definition">UHD</abbr> sources:</strong> <code>Blu-ray</code>, <code>UHD.Blu-ray</code>, <code>Blu-ray.Remux</code>, <code>BD25</code>, <code>BD50</code>, <code>BD66</code>, <code>BD100</code>, <code>WEB-DL</code>, <code>HDTV</code>, <code>UHDTV</code>, <code>HD-DVD</code><ul>
+<li><strong><abbr title="High Definition">HD</abbr>/<abbr title="Ultra High Definition">UHD</abbr> sources:</strong> <code>Blu-ray</code>, <code>UHD.Blu-ray</code>, <code>Blu-ray.Remux</code>, <code>BD25</code>, <code>BD50</code>, <code>BD66</code>, <code>BD100</code>, <code>WEB-DL</code>, <code>HDTV</code>, <code>UHDTV</code>, <code>HD-DVD</code></li>
 <li>For full blu-ray discs, region or distributor name can be added, e.g. <code>GER.Blu-ray</code>, <code>GER.BD50</code>, <code>Kino.Lorber.BD66</code></li>
 <li>For WEB-DLs, the name of the source should be added, e.g. <code>AMZN.WEB-DL</code>, <code>NF.WEB-DL</code>, <code>DSNP.WEB-DL</code>, <code>HMAX.WEB-DL</code>, <code>HULU.WEB-DL</code>, <code>MUBI.WEB-DL</code>, <code>VIMEO.WEB-DL</code>, <code>ATVP.WEB-DL</code></li>
-</ul>
-</li>
 </ul>
 <h3 id="hdr-type"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 5.75C4 4.784 4.784 4 5.75 4h4.5c.966 0 1.75.784 1.75 1.75v4.5A1.75 1.75 0 0 1 10.25 12h-4.5A1.75 1.75 0 0 1 4 10.25v-4.5zm1.75-.25a.25.25 0 0 0-.25.25v4.5c0 .138.112.25.25.25h4.5a.25.25 0 0 0 .25-.25v-4.5a.25.25 0 0 0-.25-.25h-4.5z"/></svg></span> <strong><abbr title="High Dynamic Range">HDR</abbr> Type</strong><a class="headerlink" href="#hdr-type" title="Permanent link">#</a></h3>
 <p>Put the <abbr title="High Dynamic Range">HDR</abbr> type, e.g. <code>HDR10</code>, <code>HDR10+</code>, <code>HDR10Plus</code>, <code>DV</code>, <code>DoVi</code>, <code>Dolby.Vision</code>, <code>HLG</code>, <code>HDR10.Dolby.Vision</code>, <code>HDR10.DV</code>, <code>HDR10+.DoVi</code></p>
 <div class="admonition error">
-<p>Use <code>HDR10Plus</code> instead of <code>HDR10+</code> because the + symbol gets stripped by some scripts that auto-upload to other places.</p>
+<p>Use <code>HDR10Plus</code> instead of <code>HDR10+</code> because the + symbol gets stripped by some scripts that cross-upload to other places.</p>
 </div>
 <details class="example">
 <summary>How to check the mediainfo for the <abbr title="High Dynamic Range">HDR</abbr> type:</summary>
@@ -985,7 +984,7 @@ Chroma subsampling                       : 4:2:0 (Type 2)
 Bit depth                                : 10 bits
 Bits/(Pixel*Frame)                       : 0.257
 Stream size                              : 67.3 GiB (93%)
-Writing library                          : ATEME Titan File 3.9.6 (4.9.6.2)        
+Writing library                          : ATEME Titan File 3.9.6 (4.9.6.2)
 Default                                  : Yes
 Forced                                   : No
 Color range                              : Limited
@@ -1162,43 +1161,29 @@ Matrix coefficients                      : BT.2020 non-constant
 <h3 id="video-format"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 5.75C4 4.784 4.784 4 5.75 4h4.5c.966 0 1.75.784 1.75 1.75v4.5A1.75 1.75 0 0 1 10.25 12h-4.5A1.75 1.75 0 0 1 4 10.25v-4.5zm1.75-.25a.25.25 0 0 0-.25.25v4.5c0 .138.112.25.25.25h4.5a.25.25 0 0 0 .25-.25v-4.5a.25.25 0 0 0-.25-.25h-4.5z"/></svg></span> <strong>Video Format</strong><a class="headerlink" href="#video-format" title="Permanent link">#</a></h3>
 <ul>
 <li><strong>Encodes:</strong> <code>x264</code>, <code>x265</code>, <code>XviD</code>, <code>DivX</code></li>
-<li><strong>Discs:</strong> <code>AVC</code>, <code>HEVC</code>, <code>MPEG-2</code>, <code>VC-1</code><ul>
+<li><strong>Discs:</strong> <code>AVC</code>, <code>HEVC</code>, <code>MPEG-2</code>, <code>VC-1</code></li>
 <li><code>MPEG-2</code> can be skipped on DVDs because they are always MPEG-2.</li>
-</ul>
-</li>
 <li><strong>Remuxes:</strong> <code>H.264</code>, <code>H.265</code>, <code>AVC</code>, <code>HEVC</code>, <code>VC-1</code>, <code>MPEG-2</code></li>
-<li>
-<p><strong>WEB-DLs:</strong> <code>H.264</code>, <code>H.265</code>, <code>HEVC</code>, <code>x264</code>, <code>x265</code></p>
-<div class="admonition error">
-<ul>
-<li>
-<p>AVC and H.264 are the same format, but the convention is to use H.264 on WEB-DLs. Similarly, HEVC and H.265 are the same format, but H.265 is more frequently used on WEB-DLs.</p>
-</li>
-<li>
-<p>x264 and x265 must only be used in WEB-DL file names if the mediainfo shows the encoding settings present. One school of thought is that WEB-DLs should always use H.264 and H.265 instead of x264 and x265 respectively, regardless of the presence of encoding settings.</p>
-</li>
+<li><strong>WEB-DLs:</strong> <code>H.264</code>, <code>H.265</code>, <code>HEVC</code>, <code>x264</code>, <code>x265</code></li>
 </ul>
-</div>
-</li>
-<li>
-<p><strong>HDTV captures</strong> are generally either <code>H.264</code> or <code>MPEG-2</code></p>
-</li>
+<p>!!! error ""</p>
+<pre><code>  - AVC and H.264 are the same format, but the convention is to use H.264 on WEB-DLs. Similarly, HEVC and H.265 are the same format, but H.265 is more frequently used on WEB-DLs.
+
+  - x264 and x265 must only be used in WEB-DL file names if the mediainfo shows the encoding settings present. One school of thought is that WEB-DLs should always use H.264 and H.265 instead of x264 and x265 respectively, regardless of the presence of encoding settings.
+</code></pre>
+<ul>
+<li><strong>HDTV captures</strong> are generally either <code>H.264</code> or <code>MPEG-2</code></li>
 <li><strong>HDTV encodes</strong> are generally <code>x264</code></li>
 </ul>
 <h3 id="audio-format"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 5.75C4 4.784 4.784 4 5.75 4h4.5c.966 0 1.75.784 1.75 1.75v4.5A1.75 1.75 0 0 1 10.25 12h-4.5A1.75 1.75 0 0 1 4 10.25v-4.5zm1.75-.25a.25.25 0 0 0-.25.25v4.5c0 .138.112.25.25.25h4.5a.25.25 0 0 0 .25-.25v-4.5a.25.25 0 0 0-.25-.25h-4.5z"/></svg></span> <strong>Audio Format</strong><a class="headerlink" href="#audio-format" title="Permanent link">#</a></h3>
 <ul>
-<li>
-<p><strong>Lossy:</strong> <code>DD5.1</code>, <code>DD-EX.5.1</code>, <code>DDP5.1</code>, <code>AC3</code>, <code>AAC2.0</code>, <code>DTS</code>, <code>DTS.5.1</code>, <code>DTS-ES.6.1</code></p>
-<div class="admonition error">
-<p>Use <code>DDP</code> instead of <code>DD+</code> because the '+' symbol gets stripped by some scripts that cross-upload to other places.</p>
-</div>
-</li>
-<li>
-<p><strong>Lossless:</strong> <code>DTS-HD.MA.5.1</code>, <code>DTS-HD.MA.2.0</code>, <code>TrueHD.5.1</code>, <code>FLAC2.0</code>, <code>LPCM1.0</code></p>
-<ul>
-<li><strong>Object-based formats:</strong> <code>TrueHD.7.1.Atmos</code>, <code>DTS-X</code>, <code>DDP5.1.Atmos</code>, <code>E-AC3.Atmos</code></li>
+<li><strong>Lossy:</strong> <code>DD5.1</code>, <code>DD-EX.5.1</code>, <code>DDP5.1</code>, <code>AC3</code>, <code>AAC2.0</code>, <code>DTS</code>, <code>DTS.5.1</code>, <code>DTS-ES.6.1</code></li>
 </ul>
-</li>
+<p>!!! error ""
+  Use <code>DDP</code> instead of <code>DD+</code> because the '+' symbol gets stripped by some scripts that cross-upload to other places.</p>
+<ul>
+<li><strong>Lossless:</strong> <code>DTS-HD.MA.5.1</code>, <code>DTS-HD.MA.2.0</code>, <code>TrueHD.5.1</code>, <code>FLAC2.0</code>, <code>LPCM1.0</code></li>
+<li><strong>Object-based formats:</strong> <code>TrueHD.7.1.Atmos</code>, <code>DTS-X</code>, <code>DDP5.1.Atmos</code>, <code>E-AC3.Atmos</code></li>
 </ul>
 <details class="example">
 <summary>Alternate names of audio formats in mediainfo:</summary>
@@ -1260,10 +1245,15 @@ Matrix coefficients                      : BT.2020 non-constant
 <p>The tag must always be the at the end of the file name. Format should be <code>-TAG</code>, without any space before the <code>-</code></p>
 <p>Do not use a tag that is already in use by another known group or releaser.</p>
 
-              
-            </article>
-            
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
@@ -1311,7 +1301,7 @@ Matrix coefficients                      : BT.2020 non-constant
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <i>Site Last Updated&colon; June 26 2022</i>
+      <i>Site Last Updated&colon; September 23 2022</i>
     </div>
   
   
@@ -1330,10 +1320,11 @@ Matrix coefficients                      : BT.2020 non-constant
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "search.highlight"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.37e9125f.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       
